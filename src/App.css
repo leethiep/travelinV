@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
+@font-face {
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff2)
+      format("woff2"),
+    url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff)
+      format("woff");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --lightblue:#d8c4c3;
+  --darkpink :#C0E2E2;
+  
+}
+header {
+  height: 60px;
+  font-family: headings;
+}
+#nav {
+  display: inline-block;
+}
+a {
+  color: #323232;
+  font-size: 16px;
+  text-decoration: none;
+}
+#nav a {
+  padding: 0 25px;
+  line-height: 60px;
+}
+#nav a:hover {
+  background-color: #d2d2d2;
+  border-radius: 10px;
+}
+
+/* @media screen and (max-width: 800px) {
+  header {
+    display: none;
+  }
+} */
+
+#nav1 {
+  float: right;
+  display: inline-flex;
+}
+
+#nav1 .image {
+  margin: 10px 25px;
+  position: relative;
+  top: -10px;
+}
+.img1 {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+}
+
+li {
+  list-style-type: none;
+}
+#nav1 .avatar a:hover {
+  color: #d2d2d2;
+}
+#nav1 li:hover .avatar {
+  display: flex;
+}
+#nav1 .avatar {
+  display: none;
+  box-shadow: 0px 0px 5px 2px #d2d2d2;
+  border-radius: 10px;
+  width: 50px;
+  height: 54px;
+  position: relative;
+  top: -15px;
+  color: #323232;
+  justify-content: center;
+}
+#nav1 .avatar li {
+  position: relative;
+  right: 20px;
+  border-bottom: 1px solid #d2d2d2;
+}
+#nav .icon_shop {
+  position: relative;
+  bottom: -2px;
+}
+
+#nav1 .search {
+  position: relative;
+  bottom: -4px;
+  padding: 0 25px;
+  border: 1px solid #d2d2d2;
+  height: 26px;
+  border-radius: 20px;
+}
+
+#nav1 .icon_chevDown {
+  position: relative;
+  bottom: -4px;
+  right: -10px;
+}
+/* #img_post{
+  float: right;
+}
+#img_post .img_title{
+  position: relative;
+  right: -700px;
+  width: 60rem;
+  height: 44rem;
+}
+#img_post .img_custom{
+  position: relative;
+  top: -45rem;
+  right: -700px;
+  width: 60rem;
+  height: 45rem;
+} */
+.intro_image{
+  margin-right: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.welcome_text {
+  width: 40%;
+  /* left: 60%; */
+}
+.welcome_text span {
+  background-image: linear-gradient(transparent calc(100% - 0.45em),var(--darkpink) 0),
+  linear-gradient(transparent calc(100% - 0.45em),var(--lightblue) 0);
+ 
+  background-position:0% 0%, 0% 0%;
+  background-size:
+  0% 100%, 100% 100%;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+.welcome_text span:hover{
+  background-image: linear-gradient(transparent calc(100% - 0.45em),var(--lightblue) 0),
+  linear-gradient(transparent calc(100% - 0.45em),var(--darkpink) 0);
+}
+.intro_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Merriweather", serif;
+  color: #353535;
+  font-size: 22px;
+  line-height: 40.7px;
+  text-align: left;
+  /* position: relative; */
+  
+}
+.intro_text--cover {
+  position: absolute;
+  top: 25%;
+
+    left: 60%;
+    width: 40%;
+}
+.destination_text span {
+  background-color:#e0f0f0;
+border-radius:30px;
+
+margin:22px 3px 0px;
+padding:0px 15px;
+
+}
