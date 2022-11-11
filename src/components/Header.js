@@ -1,29 +1,27 @@
-import React from 'react'
-import "../App.css"; 
-
+import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
 import { RiShoppingBasket2Line } from "react-icons/ri";
 import { HiChevronDown } from "react-icons/hi";
 import { IconContext } from "react-icons";
-function Header() {
+import "../App.css";
+const Header = () => {
   const [str, setStr] = useState(
     "https://vivureviews.com/wp-content/uploads/2022/08/avatar-vo-danh-9.png"
   );
-  console.log(str);
   return (
-    <div>
+    <>
       <header>
         <div id="nav">
-          <a href="#">logo</a>
-          <a href="#/home">Home</a>
-          <a href="#/blogs">Blogs</a>
-          <a href="#/shop">
+          <Link to="/">logo</Link>
+          <Link to="/">Home</Link>
+          <Link to="/Blogs">Blogs</Link>
+          <Link to="/Shop">
             Shop
             <IconContext.Provider value={{ className: "icon_shop" }}>
               <RiShoppingBasket2Line />
             </IconContext.Provider>
-          </a>
-          <a href="#/shop">About us</a>
+          </Link>
+          <Link to="/AboutUs">About us</Link>
         </div>
         <ul id="nav1">
           <li className="search">
@@ -35,30 +33,30 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="http://localhost:3000">
               <div className="image">
                 <img className="img1" src={str} alt="avatar"></img>
                 <HiChevronDown />
               </div>
             </a>
             <ul className="avatar">
-              {str ==
+              {str ===
               "https://vivureviews.com/wp-content/uploads/2022/08/avatar-vo-danh-9.png" ? (
                 <div>
                   <li>
-                    <a href="">Login</a>
+                    <Link to="/Login">Login</Link>
                   </li>
                   <li>
-                    <a href="">Signin</a>
+                    <Link to="/Signin">Signin</Link>
                   </li>
                 </div>
               ) : (
                 <div>
                   <li>
-                    <a href="">Personal</a>
+                    <Link to="/Personal">Personal</Link>
                   </li>
                   <li>
-                    <a href="">Logout</a>
+                    <Link to="/Logout">Logout</Link>
                   </li>
                 </div>
               )}
@@ -66,12 +64,9 @@ function Header() {
           </li>
         </ul>
       </header>
-      {/* <div id="img_post">
-        <img className="img_title" src="./Dalat.png"></img>
-        <img className="img_custom" src="./img_custom.png"></img>
-      </div> */}
-    </div>
+      <Outlet />
+    </>
   );
-}
+};
 
-export default Header
+export default Header;
