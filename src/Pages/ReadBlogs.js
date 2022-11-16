@@ -1,14 +1,18 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import "../readBlogs.css";
-import { useState} from "react";
+import { Link } from "react-router-dom";
+import { useState, useRef, useMemo } from "react";
 import { HiChevronRight } from "react-icons/hi";
 import { FiArrowRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import img_province  from "../image/dalat_title.png";
-import img_custom_title from "../image/img_custom_title.png"
-import img_post_author from "../image/Dalat.png"
-import img_custom from "../image/img_custom.png"
+import { BiChevronDown } from "react-icons/bi";
+import img_province from "../image/dalat_title.png";
+import img_custom_title from "../image/img_custom_title.png";
+import img_post_author from "../image/Dalat.png";
+import img_custom from "../image/img_custom.png";
+import CommentInput from "../components/commentInput";
+import CommentReply from "../components/commentReply";
+import { CommentCard } from "../components/commentCard";
 //Chứa thông tin cơ bản của tác giả và tiêu đề bài post
 const Post = {
   authorBlog_name: "Chó thích Review",
@@ -44,26 +48,114 @@ const contents = [
   },
 ];
 //Các bài post liên quan
-const relatedPosts =[
+const relatedPosts = [
   {
-    image: 'https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg',
-    title: 'Địa điểm săn mây Đà Lạt'
+    image:
+      "https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg",
+    title: "Địa điểm săn mây Đà Lạt",
   },
   {
-    image: 'https://i.pinimg.com/564x/6b/30/ef/6b30efc71a14e507e3821e5e6330ad30.jpg',
-    title: 'Đà Lạt và những cung đường thơ mộng'
+    image:
+      "https://i.pinimg.com/564x/6b/30/ef/6b30efc71a14e507e3821e5e6330ad30.jpg",
+    title: "Đà Lạt và những cung đường thơ mộng",
   },
   {
-    image: 'https://i.pinimg.com/564x/af/b6/bd/afb6bd2c6c3efcb3fec27362febb8a58.jpg',
-    title: 'Bộ ảnh Đà Lạt qua đôi mắt của những “kẻ mộng mơ'
-  }
-]
+    image:
+      "https://i.pinimg.com/564x/af/b6/bd/afb6bd2c6c3efcb3fec27362febb8a58.jpg",
+    title: "Bộ ảnh Đà Lạt qua đôi mắt của những “kẻ mộng mơ",
+  },
+];
+
+const comment = [
+  {
+    post_key: 1,
+    name_author: "Cậu Vàng",
+    content_comment:
+      "Hola! Me gustaría saber donde comprar los billetes para ir de Bali a Nusa Lembongan, y en que puerto bajar?Gracias",
+    date: "30/6/2002",
+  },
+  {
+    post_key: 2,
+    name_author: "Cậu Vàng",
+    content_comment:
+      "Hola! Me gustaría saber donde comprar los billetes para ir de Bali a Nusa Lembongan, y en que puerto bajar?Gracias",
+    date: "30/6/2002",
+  },
+  {
+    post_key: 3,
+    name_author: "Cậu Vàng",
+    content_comment:
+      "Hola! Me gustaría saber donde comprar los billetes para ir de Bali a Nusa Lembongan, y en que puerto bajar?Gracias",
+    date: "30/6/2002",
+  },
+  {
+    post_key: 4,
+    name_author: "Cậu Vàng",
+    content_comment:
+      "Hola! Me gustaría saber donde comprar los billetes para ir de Bali a Nusa Lembongan, y en que puerto bajar?Gracias",
+    date: "30/6/2002",
+  },
+  {
+    post_key: 5,
+    name_author: "Cậu Vàng",
+    content_comment:
+      "Hola! Me gustaría saber donde comprar los billetes para ir de Bali a Nusa Lembongan, y en que puerto bajar?Gracias",
+    date: "30/6/2002",
+  },
+  {
+    post_key: 6,
+    name_author: "Cậu Vàng",
+    content_comment:
+      "Hola! Me gustaría saber donde comprar los billetes para ir de Bali a Nusa Lembongan, y en que puerto bajar?Gracias",
+    date: "30/6/2002",
+  },
+  {
+    post_key: 7,
+    name_author: "Cậu Vàng",
+    content_comment:
+      "Hola! Me gustaría saber donde comprar los billetes para ir de Bali a Nusa Lembongan, y en que puerto bajar?Gracias",
+    date: "30/6/2002",
+  },
+];
+const reply = [
+  {
+    post_key_reply: "R01",
+    post_key: 1,
+    name_author: "Cậu Vàng",
+    content_comment:
+      "Hola! Me gustaría saber donde comprar los billetes para ir de Bali a Nusa Lembongan, y en que puerto bajar?Gracias",
+    date: "30/6/2002",
+  },
+];
 function ReadBlogs() {
+  let PageSize = 3;
+  const focustInput = useRef();
   const [str, setStr] = useState(
     "https://vivureviews.com/wp-content/uploads/2022/08/avatar-vo-danh-9.png"
   );
   const [like, setLike] = useState(Post.likes);
   const [typeLike, setTypeLike] = useState(Post.like_status);
+  const [comments, setComments] = useState(comment);
+  const [content, setContent] = useState("");
+  const [typeComment, setTypeComment] = useState(true);
+  const [checkReply, setCheckReply] = useState(-1);
+  const [replys, setReplys] = useState(reply);
+  const [postKey, setPostKey] = useState(comment.length);
+  const [postKeyReply, setPostKeyReply] = useState("R0" + reply.length);
+  const [checkEdit, setCheckEdit] = useState();
+  const [checkReadMore, setCheckReadMore] = useState(
+    comments.length >= PageSize ? true : false
+  );
+  const [currentPage, setCurrentPage] = useState(0);
+  const currentTableData = useMemo(() => {
+    const fistIndex = comments.length - PageSize * (currentPage + 1);
+    const fistPageIndex = fistIndex < 0 ? 0 : fistIndex;
+    fistIndex < 0 ? setCheckReadMore() : setCheckReadMore(true);
+    return comments.slice(fistPageIndex, comments.length).reverse();
+  }, [currentPage, comments]);
+  console.log(comments);
+  console.log(replys);
+  console.log(typeComment, checkEdit);
   const handleLike = () => {
     if (typeLike) {
       setTypeLike(false);
@@ -72,6 +164,94 @@ function ReadBlogs() {
       setTypeLike(true);
       setLike(like + 1);
     }
+  };
+  const handleReply = (idPost) => {
+    var id = parseInt(postKeyReply.slice(-1));
+    setPostKeyReply("R0" + String(id + 1));
+    var today = new Date();
+    var date =
+      today.getDate() +
+      "/" +
+      (today.getMonth() + 1) +
+      "/" +
+      today.getFullYear();
+    setContent("");
+    setReplys([
+      ...replys,
+      {
+        post_key_reply: "R0" + String(id + 1),
+        post_key: idPost,
+        name_author: "Tai Tai",
+        content_comment: content,
+        date: date,
+      },
+    ]);
+    setTypeComment(true);
+    setCheckReply(-1);
+  };
+  const handleComment = () => {
+    var today = new Date();
+    var date =
+      today.getDate() +
+      "/" +
+      (today.getMonth() + 1) +
+      "/" +
+      today.getFullYear();
+    setPostKey((key) => key + 1);
+    setContent("");
+    setComments([
+      ...comments,
+      {
+        post_key: postKey + 1,
+        name_author: "Tai Tai",
+        content_comment: content,
+        date: date,
+      },
+    ]);
+    focustInput.current.focus();
+  };
+  const handleDelete = (type, id) => {
+    if (type === "comment-reply") {
+      let commentTemp = comments.filter((comment) => comment.post_key !== id);
+      let replyTemp = replys.filter((reply) => reply.post_key !== id);
+      setComments(commentTemp);
+      setReplys(replyTemp);
+    } else {
+      let replyTemp = replys.filter((reply) => reply.post_key_reply !== id);
+      setReplys(replyTemp);
+    }
+  };
+  const handleEdit = (type, id, content_new, comment_post_key) => {
+    var today = new Date();
+    var date =
+      today.getDate() +
+      "/" +
+      (today.getMonth() + 1) +
+      "/" +
+      today.getFullYear();
+    if (type === "comment-reply") {
+      let commentTemp = comments.filter((comment) => comment.post_key !== id);
+      commentTemp.splice(id - 1, 0, {
+        post_key: id,
+        name_author: "Tai Tai",
+        content_comment: content_new,
+        date: date,
+      });
+      setComments(commentTemp);
+    } else {
+      let replyTemp = replys.filter((reply) => reply.post_key_reply !== id);
+      replyTemp.splice(parseInt(id.slice(2, id.length)) - 1, 0, {
+        post_key_reply: id,
+        post_key: comment_post_key,
+        name_author: "Tai Tai",
+        content_comment: content,
+        date: date,
+      });
+      setReplys(replyTemp);
+    }
+    setContent("");
+    setCheckEdit(false);
+    setCheckReply(-1);
   };
   return (
     <div>
@@ -170,15 +350,15 @@ function ReadBlogs() {
         <div className="sidebar-articles">
           <div className="sidebar-articles_title">Related Posts</div>
           <div className="sidebar-articles_container">
-            {relatedPosts.map((relatedPost, index)=>(
-              <a className="article-text-block" href="">
-              <div className="article-text-block_image" key={index}>
-                <img src={relatedPost.image} alt='image of post'></img>
-              </div>
-              <div className="article-text-block_content">
-                <h2>{relatedPost.title}</h2>
-              </div>
-            </a>
+            {relatedPosts.map((relatedPost, index) => (
+              <Link className="article-text-block" to="/Blogs/Dalat">
+                <div className="article-text-block_image" key={index}>
+                  <img src={relatedPost.image} alt="image of post"></img>
+                </div>
+                <div className="article-text-block_content">
+                  <h2>{relatedPost.title}</h2>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -202,11 +382,113 @@ function ReadBlogs() {
               src={Post.img_province}
               alt="image of province"
             ></img>
-            <img
-              className="img_tilte_custom"
-              src={img_custom_title}
-            ></img>
+            <img className="img_tilte_custom" src={img_custom_title}></img>
           </a>
+        </div>
+      </div>
+
+      <div className="comments-contain">
+        <div className="comments-area">
+          <div className="comments-title">Blog comments</div>
+          <div className="comments-respond">
+            <CommentInput
+              focustInput={focustInput}
+              typeComment={typeComment}
+              content={content}
+              setContent={setContent}
+              handleComment={handleComment}
+            ></CommentInput>
+            <ul className="comments-list">
+              {currentTableData.map((comment) => (
+                <li key={comment.post_key} className="parent">
+                  <CommentCard
+                    name_read="Tai Tai"
+                    name_author={comment.name_author}
+                    date={comment.date}
+                    content_comment={comment.content_comment}
+                    setContent={setContent}
+                    setTypeComment={setTypeComment}
+                    setCheckReply={setCheckReply}
+                    post_key={comment.post_key}
+                    className="comment-reply"
+                    handleDelete={handleDelete}
+                    setCheckEdit={setCheckEdit}
+                    checkEdit={checkEdit}
+                    checkReply={checkReply}
+                    content={content}
+                    handleEdit={handleEdit}
+                  ></CommentCard>
+                  <CommentReply
+                    focustInput={focustInput}
+                    typeComment={typeComment}
+                    post_key={comment.post_key}
+                    checkReply={checkReply}
+                    setContent={setContent}
+                    setTypeComment={setTypeComment}
+                    setCheckReply={setCheckReply}
+                    content={content}
+                    handleReply={handleReply}
+                    comment_post_key={comment.post_key}
+                  ></CommentReply>
+                  {replys.map(
+                    (reply) =>
+                      comment.post_key === reply.post_key && (
+                        <div>
+                          <CommentCard
+                            name_read="Tai Tai"
+                            name_author={reply.name_author}
+                            date={reply.date}
+                            content_comment={reply.content_comment}
+                            setContent={setContent}
+                            setTypeComment={setTypeComment}
+                            setCheckReply={setCheckReply}
+                            post_key={reply.post_key_reply}
+                            className="comment-replyy"
+                            handleDelete={handleDelete}
+                            setCheckEdit={setCheckEdit}
+                            checkEdit={checkEdit}
+                            checkReply={checkReply}
+                            content={content}
+                            handleEdit={handleEdit}
+                            comment_post_key={comment.post_key}
+                            backgroundColor="#ffff"
+                            borderStyle="solid"
+                            borderWidth="2px"
+                            borderColor="#f5f5f5"
+                            marginLeft="30px"
+                          ></CommentCard>
+                          <CommentReply
+                            typeComment={typeComment}
+                            post_key={reply.post_key_reply}
+                            checkReply={checkReply}
+                            setContent={setContent}
+                            setTypeComment={setTypeComment}
+                            setCheckReply={setCheckReply}
+                            content={content}
+                            handleReply={handleReply}
+                            comment_post_key={comment.post_key}
+                          ></CommentReply>
+                        </div>
+                      )
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+          {checkReadMore && (
+            <div className="read-more">
+              <button
+                onClick={() => {
+                  setCurrentPage((currentPage) => currentPage + 1);
+                }}
+              >
+                read more{" "}
+                <IconContext.Provider value={{ className: "icon_ChevronDown" }}>
+                  <BiChevronDown />
+                </IconContext.Provider>
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

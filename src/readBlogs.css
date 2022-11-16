@@ -50,47 +50,47 @@
   position: relative;
   bottom: -2px;
 }
-.header-author{
+.header-author {
   font-family: "Merriweather Sans";
   display: flex;
   margin: 20px 0 20px 40px;
 }
-.header-author img{
+.header-author img {
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
-.header-author_row2{
+.header-author_row2 {
   flex-direction: column;
   font-size: 14px;
   line-height: 16.52px;
   margin-left: 12px;
 }
-.author-name{
+.author-name {
   font-weight: 700;
   margin-top: 10px;
 }
-.author-update-at{
+.author-update-at {
   margin-top: 8px;
 }
-.author-like{
+.author-like {
   display: flex;
   line-height: 16.52px;
   margin: 13px 0 0 20px;
 }
-.author-like button{
+.author-like button {
   border: none;
   background-color: #ffff;
 }
-.icon_OutlineHeart{
+.icon_OutlineHeart {
   font-size: 25px;
 }
-.icon_FillHeart{
+.icon_FillHeart {
   font-size: 25px;
   color: red;
 }
-.author-like-number{
-  margin:17px 0;
+.author-like-number {
+  margin: 17px 0;
 }
 .post-cover_title {
   font-family: "Merriweather Sans";
@@ -211,7 +211,6 @@
 }
 .related-category_link {
   margin-top: 50px;
-  position: relative;
   color: #353535;
   font-family: "Merriweather Sans";
 }
@@ -260,7 +259,7 @@
   color: #ffff;
   font-size: 40px;
 }
-.related-category_card a:hover .circle-icon{
+.related-category_card a:hover .circle-icon {
   transform: scale(1.1);
   background-color: indianred;
   transition: 0.5s;
@@ -277,4 +276,212 @@
   position: relative;
   top: -307px;
   left: 100px;
+}
+.comments-contain {
+  margin-top: 100px;
+  font-family: headings;
+  width: 100vw;
+  position: relative;
+}
+.comments-area {
+  width: 736px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  color: #353535;
+}
+.comments-title {
+  letter-spacing: -0.6px;
+  font-size: 40px;
+  line-height: 52px;
+  margin: 0 8px;
+}
+.comments-respond {
+  font-size: 16px;
+  padding: 25px 0;
+}
+.comments-reply-title {
+  letter-spacing: -0.225px;
+  line-height: 19.5px;
+  margin: 15px 0 7.5px;
+  font-family: headings;
+}
+.comments-form label {
+  font-family: headings;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0 0 7px;
+}
+.comments-form textarea {
+  background-color: #f5f5f5;
+  border-color: #f2f2f2;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  font-family: "Merriweather";
+  margin: 5px 0 15px;
+  padding: 16px 12px;
+  width: 100%;
+  height: 200px;
+}
+.comments-form > button {
+  transition: 0.5s;
+  background-color: #f1bc68;
+  border: none;
+  border-radius: 1287px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 24px;
+  margin: 0 0 15px;
+  padding: 9px 26px;
+  color: #353535;
+  text-align: center;
+  text-transform: uppercase;
+  float: right;
+  cursor: pointer;
+}
+.comments-list {
+  margin-top: 100px;
+  font: 15px;
+  line-height: 27px;
+}
+.parent {
+  display: list-item;
+  font-family: "Merriweather";
+  text-align: left;
+}
+.comment {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 0 0 28px;
+  padding: 21px 28px;
+}
+.comment-data {
+  font-family: "Merriweather Sans";
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 27px;
+  margin: 0 0 8px;
+}
+.reply {
+  display: inline-flex;
+}
+.comment p {
+  margin: 0 0 14px;
+}
+.comment-reply {
+  border: 1px solid #999999;
+  color: #353535;
+  border-radius: 1287px;
+  text-align: center;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  line-height: 13px;
+  margin-top: 15px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.reply:hover button {
+  background-color: #555555;
+  color: #ffff;
+}
+.comments-form .cancel {
+  border: none;
+  font-size: 13px;
+  font-family: "Merriweather";
+  text-decoration-line: underline;
+  margin-bottom: 10px;
+  background-color: #ffff;
+  cursor: pointer;
+}
+.comments-reply{
+  margin-bottom: 70px;
+}
+.comment-replyy{
+  border: 1px solid #999999;
+  background-color: #ffff;
+  color: #353535;
+  border-radius: 1287px;
+  text-align: center;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  line-height: 13px;
+  margin-top: 15px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.icon_FillCircleFill{
+  margin: 0 7px;
+  font-size: 4px;
+  position: relative;
+  top:12px
+}
+.comment-more{
+  float: right;
+}
+.icon_OulineMore{
+  font-size: 25px;
+}
+.comment-more:hover .comment-edit-delete{
+  display: block;
+}
+.comment-edit-delete{
+  display: none;
+  width: 90px;
+  position:absolute;
+  right: 3px;
+  z-index: 1;
+  text-align: center;
+  background-color: #ffff;
+  box-shadow: 0px 0px 5px 0.1px #999999;
+  border-radius: 5px;
+}
+.comment-edit-delete button{
+  color: #807e7e;
+  font-size: 13px;
+  font-family: headings;
+  border: none;
+  background-color: #ffff;
+  text-transform: uppercase;
+  cursor: pointer ;
+}
+.comment-edit-delete button:hover{
+  transform: scale(1.1);
+  color: #353535;
+}
+.read-more{
+  text-align: center;
+}
+.read-more > button{
+  transition: 0.5s;
+  background-color: #f1bc68;
+  border: none;
+  border-radius: 1287px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 24px;
+  margin: 0 0 15px;
+  padding: 9px 40px;
+  color: #353535;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.icon_ChevronDown{
+  font-size: 20px;
+  position: relative;
+  top: 5px;
+}
+.read-more button:hover{
+  transform: scale(1.1);
+  background-color: indianred;
+  color: #ffff;
+  transition: 0.5s;
 }
