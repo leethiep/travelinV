@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import "./App.css";
 import Home from "./Pages/Home";
 import ReadBlogs from "./Pages/ReadBlogs";
+import Login from "./Pages/Login";
 export default function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
           <Route path="Blogs" element={<ReadBlogs />} />
+          <Route path="/Login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>

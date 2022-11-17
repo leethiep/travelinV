@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './LoginForm.css'
+import '../Login.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import loginImage from "../image/loginImage.png";
 
 function Login () {
         const [passwordType, setPasswordType] = useState("password");
@@ -15,7 +16,9 @@ function Login () {
           }
         };
     return (
-        <div class="signin" >
+        <div>
+          <img src={loginImage} height="auto"/>
+        <div class="signin">
             <div>
             <h1 class="A0">Welcome Back</h1>
             </div>
@@ -45,6 +48,8 @@ function Login () {
                 </form>
             </div>
         </div>
+        </div>
+        
     )
 }
 

@@ -1,0 +1,121 @@
+.signin {
+    line-height: 2.5rem;
+    position:absolute;
+    left: 60rem;
+    top: 10rem;
+    font-weight: bold;
+    font-style:italic;
+    font-family: loginFont;
+}
+
+.Info {
+    line-height: 1.5rem;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+.A0{
+    font-weight:bold;
+    font-style: italic;
+    margin-bottom:1px;
+}
+
+.flex1 {
+    display: flex;
+}
+.A1{
+    color: #8fbc8f !important;
+    flex-grow:3;
+    text-align: center;
+    margin-top: 0.1px;
+    margin-left: 3rem;
+    margin-right: 1rem;
+}
+.A2{
+    font-weight:bold;
+    font-style: italic;
+    flex-grow:1;
+    margin-top: 0.1px;
+}
+
+.flex2 {
+    display: flex;
+}
+.A3{
+    font-size:0.8rem;
+    flex-grow:3;
+
+}
+.A4{
+    font-size:0.8rem;
+    flex-grow:1;
+    text-align: right;
+}
+
+.A5{
+    text-align: center;
+}
+
+input[type=text], input[type=submit] {
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 8px;
+    border: 1px solid ;
+    font-style: italic;
+}
+.Input Input{
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 8px;
+    border: 1px solid ;
+    font-style: italic;
+  }
+
+.icons-span{
+    position: absolute;
+    right: 1.25rem;
+    padding-top: 0.5rem; 
+    font-size: 20px
+    
+}
+
+.IP1{
+  margin-top:1rem;
+  background-color: black;
+  color: white;
+}
+
+.passDis {
+    margin-top: 15px;
+}
+
+
+
+.IP2 {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  background-image: url("C:\Users\Admin\Downloads\Google__G__Logo.svg.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 40px 5px;
+
+}
+
+@font-face {
+    font-family: loginFont;
+    src: url("C:\Users\Admin\Downloads\sansita-swashed\fonts\otf\SansitaSwashed-BoldItalic.otf");
+}
+
+  /* body {
+    background-image: url("C:\Users\Admin\Pictures\Screenshots\Screenshot (1024).png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+} */
