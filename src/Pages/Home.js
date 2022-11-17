@@ -10,7 +10,6 @@ function Home() {
   return (
     <div className="App">
       <Intro />
-      <Intro />
       <div className="list_post">
         <FeaturePost />
         
