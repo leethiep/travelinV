@@ -267,13 +267,13 @@ function ReadBlogs() {
           {/* Thanh địa chỉ */}
           <ul className="post-breadcrums_list">
             <li>
-              <a href="">Home</a>
+              <Link to='/'>Home</Link>
               <IconContext.Provider value={{ className: "icon_chevRight" }}>
                 <HiChevronRight />
               </IconContext.Provider>
             </li>
             <li>
-              <a href="">Blogs</a>
+              <Link to = '/Blogs'>Blogs</Link>
               <IconContext.Provider value={{ className: "icon_chevRight" }}>
                 <HiChevronRight />
               </IconContext.Provider>
