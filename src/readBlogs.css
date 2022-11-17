@@ -222,7 +222,7 @@
   font-family: "Merriweather Sans";
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.1px;
   line-height: 23.25px;
   margin-top: 7px;
 }
@@ -424,10 +424,10 @@
   background-color: #ffff;
   cursor: pointer;
 }
-.comments-reply{
+.comments-reply {
   margin-bottom: 70px;
 }
-.comment-replyy{
+.comment-replyy {
   border: 1px solid #999999;
   background-color: #ffff;
   color: #353535;
@@ -441,25 +441,25 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.icon_FillCircleFill{
+.icon_FillCircleFill {
   margin: 0 7px;
   font-size: 4px;
   position: relative;
-  top:12px
+  top: 12px;
 }
-.comment-more{
+.comment-more {
   float: right;
 }
-.icon_OulineMore{
+.icon_OulineMore {
   font-size: 25px;
 }
-.comment-more:hover .comment-edit-delete{
+.comment-more:hover .comment-edit-delete {
   display: block;
 }
-.comment-edit-delete{
+.comment-edit-delete {
   display: none;
   width: 90px;
-  position:absolute;
+  position: absolute;
   right: 3px;
   z-index: 1;
   text-align: center;
@@ -467,23 +467,23 @@
   box-shadow: 0px 0px 5px 0.1px #999999;
   border-radius: 5px;
 }
-.comment-edit-delete button{
+.comment-edit-delete button {
   color: #807e7e;
   font-size: 13px;
   font-family: headings;
   border: none;
   background-color: #ffff;
   text-transform: uppercase;
-  cursor: pointer ;
+  cursor: pointer;
 }
-.comment-edit-delete button:hover{
+.comment-edit-delete button:hover {
   transform: scale(1.1);
   color: #353535;
 }
-.read-more{
+.read-more {
   text-align: center;
 }
-.read-more > button{
+.read-more > button {
   transition: 0.5s;
   background-color: #f1bc68;
   border: none;
@@ -498,12 +498,12 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.icon_ChevronDown{
+.icon_ChevronDown {
   font-size: 20px;
   position: relative;
   top: 5px;
 }
-.read-more button:hover{
+.read-more button:hover {
   transform: scale(1.1);
   background-color: indianred;
   color: #ffff;
