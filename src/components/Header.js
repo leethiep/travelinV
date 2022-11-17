@@ -35,14 +35,14 @@ const Header = () => {
           <li>
             <a href="http://localhost:3000">
               <div className="image">
-                <img className="img1" src={str} alt="avatar"></img>
+                <img  src={str} alt="avatar"></img>
                 <HiChevronDown />
               </div>
             </a>
             <ul className="avatar">
               {str ===
               "https://vivureviews.com/wp-content/uploads/2022/08/avatar-vo-danh-9.png" ? (
-                <div>
+                <div className="public">
                   <li>
                     <Link to="/Login">Login</Link>
                   </li>

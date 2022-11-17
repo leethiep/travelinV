@@ -105,7 +105,7 @@ input[type=text], input[type=submit] {
   color: black;
   font-weight: bold;
   font-style: italic;
-  background-image: url("C:\Users\Admin\Downloads\Google__G__Logo.svg.png");
+  /* background-image: url("C:\Users\Admin\Downloads\Google__G__Logo.svg.png"); */
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 50px 5px;
@@ -124,9 +124,9 @@ input[type=text], input[type=submit] {
     margin-top: 15px;
 }
 
-@font-face {
+/* @font-face {
     font-family: loginFont;
     src: url("C:\Users\Admin\Downloads\sansita-swashed\fonts\otf\SansitaSwashed-BoldItalic.otf");
-}
+} */
 
   

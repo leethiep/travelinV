@@ -13,6 +13,25 @@
   --lightblue: #d8c4c3;
   --darkpink: #c0e2e2;
 }
+#img_post {
+  float: right;
+}
+#img_post .img_title {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  z-index: -1;
+  width: 875px;
+  height: 750px;
+}
+#img_post .img_custom {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  z-index: -1;
+  width: 875px;
+  height: 750px;
+}
 .post-cover_content {
   color: #353535;
   line-height: 29.6px;
