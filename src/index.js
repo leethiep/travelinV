@@ -6,6 +6,7 @@ import "./App.css";
 import Home from "./Pages/Home";
 import ReadBlogs from "./Pages/ReadBlogs";
 import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 export default function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="Blogs" element={<ReadBlogs />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
