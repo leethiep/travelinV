@@ -139,6 +139,9 @@
   margin: 27px 0;
   width: 95%;
 }
+.blog-article::-webkit-scrollbar {
+  display: none;
+}
 .f-image2 img {
   width: 44%;
   height: 511px;
