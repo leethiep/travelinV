@@ -1,6 +1,5 @@
 import "../home.css";
 import Intro from "../components/Intro";
-import Header from "../components/Header";
 import FeaturePost from "../components/FeaturePost";
 import GoNext from "../components/GoNext";
 import Slider from "../components/Slider";

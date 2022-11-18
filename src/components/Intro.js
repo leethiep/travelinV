@@ -10,17 +10,19 @@ function Intro() {
         <div className="intro_text--cover">
           <em className="welcome_text">
             Hi, welcome to Travel inVietNam
-            <br/>
-             We create inspiring <span>travel blogs</span>
-             about the world’s most beautiful places to make planning your
+            <br />
+            We create inspiring <span>travel blogs</span>
+            about the world’s most beautiful places to make planning your
             holiday a piece of cake!
           </em>
-          <p className="destination_text"> Choose a 
-          <span>destination here 
-          <HiChevronDown />
-          
-          </span>
-           to start your journey.</p>
+          <p className="destination_text">
+            {" "}
+            Choose a
+            <span>
+              destination here <HiChevronDown />
+            </span>
+            to start your journey.
+          </p>
         </div>
       </div>
     </>
