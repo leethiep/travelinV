@@ -6,6 +6,7 @@ import ReadBlogs from "./Pages/ReadBlogs";
 import ProtectedRoutes from "./components/PrivateRouter";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register"
+import Blogs from "./Pages/Blogs";
 // import PrivateRoutes from "./PrivateRoutes";
 // import ProtectedRoutes from "./PrivateRouter";
 // import Personal from "./Personal";
