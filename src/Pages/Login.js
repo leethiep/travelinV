@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../Login.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import loginImage from "../image/loginImage.png";
+import {FcGoogle} from 'react-icons/fc';
 
 function Login () {
         const [passwordType, setPasswordType] = useState("password");
@@ -45,6 +46,9 @@ function Login () {
                     <input type="submit" value="Sign in" class="IP1"></input>
                     <p class="A5">Or</p>
                     <input type="submit" value="Sign in with Google" class="IP2"></input>
+                    <div class="icon1">
+                    <FcGoogle/>
+                    </div>
                 </form>
             </div>
         </div>

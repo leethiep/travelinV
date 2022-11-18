@@ -3,6 +3,7 @@ import { useState } from 'react';
 import '../Register.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import loginImage from "../image/loginImage.png";
+import {FcGoogle} from 'react-icons/fc';
 
 
 
@@ -64,9 +65,12 @@ function Register () {
                     <input type="submit" value="Sign up" class="IP1"></input>
                     <p class="A5">Or</p>
                     <input type="submit" value="Sign in with Google" class="IP2"></input>
+                    <div class="icon">
+                    <FcGoogle/>
+                    </div>
                 </form>
             </div>
-        </div>
+        </div> 
         </div>
     )
        

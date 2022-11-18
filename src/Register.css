@@ -1,11 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff2)
+      format("woff2"),
+    url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff)
+      format("woff");
+}
+
+
 .register {
     line-height: 2.5rem;
     position:absolute;
-    left: 60rem;
+    left: 61rem;
     top: 10rem;
     font-weight: bold;
     font-style:italic;
-    font-family: loginFont;
+    font-family: Merriweather;
+    color: #353535;
 }
 
 .Info {
@@ -98,17 +112,19 @@ input[type=text], input[type=submit] {
   margin-top:1rem;
   background-color: black;
   color: white;
+  font-family: Merriweather;
 }
 
 .IP2 {
   background-color: white;
-  color: black;
   font-weight: bold;
   font-style: italic;
-  /* background-image: url("C:\Users\Admin\Downloads\Google__G__Logo.svg.png"); */
+  background-image: "url("+ ggLogo +")";
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 50px 5px;
+  font-family: Merriweather;
+  color: #353535;
 
 }
 
@@ -124,9 +140,9 @@ input[type=text], input[type=submit] {
     margin-top: 15px;
 }
 
-/* @font-face {
-    font-family: loginFont;
-    src: url("C:\Users\Admin\Downloads\sansita-swashed\fonts\otf\SansitaSwashed-BoldItalic.otf");
-} */
-
-  
+.icon {
+    position:absolute;
+    bottom: -5px;
+    left: 4rem;
+    font-size: 20px;
+}
