@@ -1,0 +1,276 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff2)
+      format("woff2"),
+    url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff)
+      format("woff");
+}
+body{
+  font-family: headings;
+}
+.h1-container{
+  position: absolute;
+  width: 1300px;
+  height: 400px;
+  left: 80px;
+  top: 110px;
+  background-image: url(https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/08/chua-cau-hoi-an-vntrip-e1504759723431.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100px;
+  text-align:  center;
+}
+.h1-container h1{
+  font-size: 130px;
+  font-family: headings;
+  color: white;
+  display: inline-block;
+} 
+.goto-container{
+  position: absolute;
+  width: 1300px;
+  height: 70px;
+  left: 80px;
+  top: 550px;
+  background-color: #FCFCFC;
+  border-radius: 30px;
+  border-bottom: 4px solid gray;
+  border-right: 4px solid gray;
+  overflow: hidden;
+}
+.goto-container p{
+  position: absolute;
+  width: auto;
+  height: 50px;
+  text-decoration-line: underline;
+  margin: 20px;
+}
+/* .goto-container a:hover{
+  background-color: #83ddda;
+} */
+.goto-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 74px;
+}
+.goto-li{
+ position: relative;
+ margin: 3px 3px ; 
+ margin-left: auto;
+ height: 50px;
+ width: auto;
+ display: inline-block;
+}
+.goto-container span{
+  margin: 10px;
+  text-decoration: underline;
+  float: left;
+  margin-top: 20px;
+}
+.goto-a{
+  margin-top: 10px;
+  text-align: center;
+  display: inline-flex;
+  position: relative;
+  border-radius: 20px;
+  background-color: #C1E2E1;
+  padding: 10px;
+}
+.goto-container a:hover{
+  background-color: #8febee;
+}
+.featured-container {
+  position: absolute;
+  width: 1300px;
+  height: 550px;
+  left: 80px;
+  top: 650px;
+}
+.featured-container h2{
+  display: flex;
+  font-size: 36px;
+}
+.image-ctn{
+  position: relative;
+  width: 600px;
+  height: 380px;
+  overflow: hidden;
+  border-radius: 30px;
+  float: left;
+}
+.image-ctn2{
+  float: right;
+  width: 600px;
+  height: 380px;
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+}
+/* .featured-img{
+  transform: scale();
+  transition-duration: ;
+} */
+.post-name{
+  position: relative;
+  top: 1100px;
+  width: 540px;
+  height: 135px;
+  left: 100px; 
+  font-size: 32px;
+  font-style: italic;
+  margin-left: 30px;
+  text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+  text-align: center;
+}
+.post-name2{
+  position: relative;
+  font-size: 32px;
+  font-style: italic;
+  line-height: 40px;
+  text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+  text-align: center;
+  word-wrap:break-word;
+}
+.div-featured-post2{
+  position:absolute;
+  width:400px;
+  top: 1120px;
+  height:auto;
+  left: 870px;
+}
+.div-featured-post1{
+  position:absolute;
+  width:400px;
+  top: 1120px;
+  height:auto;
+  left: 150px;
+}
+.recent{
+  position: relative;
+  width: 1300px;
+  height: 480px;
+  display: inline-block;
+  top: 1150px;
+  left: 80px;
+  background-color: none;
+  border-radius: 30px;
+
+}
+.recent h2{
+  position: absolute;
+  align-items: center;
+  font-size: 36px;
+  margin: 20px 0 20px 0;
+}
+.recent ul{
+  margin-top: 100px;
+}
+.recent li{
+  position: relative;
+  bottom: 10px;
+  margin-left: 70px;
+}
+.img-div1{
+  position: absolute;
+  height: 325px;
+  width: 325px;
+  border-radius: 30px;
+  overflow: hidden;
+  float: left;
+  background-size: cover;
+}
+.recent-img{
+  width: 325px;
+  height: 325px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 30px;
+}
+.recent p{
+  text-align: center;
+  float: left;
+  word-wrap: break-word;
+  height: auto;
+  width: 250px;
+  position: relative;
+  margin-left: 150px;
+  font-size: 20px;
+}
+.slider-ctn{
+  position: relative;
+  width: 1300px;
+  height: 600px;
+  left: 80px;
+  border-radius: 30px;
+  top: 1250px;
+  background-color: #EDECEC;
+}
+.slider-div{
+  position: absolute;
+  width: 750px;
+  height: 550px;
+  border-radius: 30px;
+  left: 500px;
+  overflow: hidden;
+  margin-top: 25px;
+}
+.slider-img{
+  width: 750px;
+  height: 550px;
+  background-size: cover;
+  z-index: 1;
+}
+img:hover{
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+.slider-btn{
+  position: absolute;
+  top:50%;
+  background: none;
+  font-size: 40px;
+  border-radius: 100px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+}
+.slider-div button:hover{
+  background-color: gray;
+}
+#right{
+  right: 32px;
+}
+#left{
+  left: 32px;
+}
+.a{
+  position: absolute;
+}
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+ }
+ 
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+ }
+ .txt-ctn{
+   position: absolute;
+   font-size: 50px;
+   height: auto;
+ }

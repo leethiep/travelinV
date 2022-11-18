@@ -35,7 +35,7 @@ const Header = () => {
           <li>
             <a href="http://localhost:3000">
               <div className="image">
-                <img className="img1" src={str} alt="avatar"></img>
+                <img  src={str} alt="avatar"></img>
                 <HiChevronDown />
               </div>
             </a>
