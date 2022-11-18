@@ -13,7 +13,7 @@ const content = [{
   image: "https://e4life.vn/wp-content/uploads/2021/09/tu-vung-ielts-chu-de-travel.png"
 }
 ]
-export default function App() {
+export default function Blogs() {
 
   return ( 
   <div>

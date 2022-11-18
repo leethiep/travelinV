@@ -14,10 +14,9 @@
   margin: 0;
   box-sizing: border-box;
 } */
-:root{
-  --lightblue:#d8c4c3;
-  --darkpink :#C0E2E2;
-  
+:root {
+  --lightblue: #d8c4c3;
+  --darkpink: #c0e2e2;
 }
 header {
   height: 60px;
@@ -65,8 +64,10 @@ li {
   list-style-type: none;
 }
 
-.avatar li:hover{
+.avatar li:hover {
   transform: scale(1.1);
+}
+.avatar li:hover a{
   color: #353535;
 }
 #nav1 li:hover .avatar {
@@ -81,6 +82,9 @@ li {
   position: relative;
   bottom: 20px;
   right: 10px;
+}
+.avatar a {
+  color: #807e7e;
 }
 .icon_shop {
   position: relative;

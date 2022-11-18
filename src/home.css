@@ -31,6 +31,8 @@ body {
   }
 } */
 
+
+
 .intro_image {
   margin-right: 40px;
   position: absolute;
@@ -80,32 +82,52 @@ body {
   left: 60%;
   width: 40%;
 }
+.destination_text {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  
+}
 .destination_text span {
   background-color: #e0f0f0;
   border-radius: 30px;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
 
-  margin: 22px 3px 0px;
-  padding: 0px 15px;
+  /* margin: 22px 3px 0px; */
+  padding: 0px 5px;
+  margin: 5px 10px;
+
 }
 .feature_post {
   width: 400px;
-  height: 300px;
-  margin: 0 30px;
+  height: 400px;
+  margin: 0 20px;
+  overflow: hidden;
+
 }
 .feature_post h2 {
   color: #353535;
   display: -webkit-box;
   font-family: headings;
   font-size: 24px;
+  padding: 10px;
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 37.7px;
   text-align: center;
 }
-.feature_post img {
-  width: 100%;
-  object-fit: cover;
+.feature_post--img{
+  width: 400px;
+  height: 300px;
   overflow: hidden;
+
+}
+.feature_post--img img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
   border-radius: 20px;
 }
 .list_post {
@@ -117,8 +139,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 25%;
-  padding: 20px;
+  padding: 30px;
 }
 .next_place {
   align-items: center;
@@ -128,8 +149,12 @@ body {
   font-family: headings;
   font-weight: 700;
   line-height: 16px;
-  padding: 5px 20px 5px 5px;
+  padding: 5px 25px 5px 5px;
   text-align: left;
+  margin: 0 5px;
+}
+.next_place:hover{
+  background-color: #e8e7e5;
 }
 .next_place a {
   display: flex;
@@ -143,26 +168,24 @@ body {
   margin-right: 10px;
 }
  .slideshow-container {
-  margin: 40px;
-  border-radius: 20px;
+  
   color: #fff;
   position: relative;
   overflow: hidden;
-  /* width: 1200px;
-  height: 500px; */
+  width: 100%;
+ 
 }
 
  
 .slideshow-slide {
   margin: 0 auto;
-  /* overflow: hidden; */
- /* width: 100%; */
+  padding: 30px;
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 40px;
-  border-radius: 20px;
+  /* margin: 40px; */
+  /* border-radius: 20px; */
   color: #fff;
   position: relative;
   /* display: flex; */
@@ -170,7 +193,7 @@ body {
   transition: ease 1000ms;
 } 
 .slide {
-  height: 500px;
+  /* height: 500px; */
   
 }
 
@@ -211,7 +234,7 @@ body {
   margin: 5px;
 }
 .slideshow-slide-text button {
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 1287px;
   justify-content: center;
   font-family: headings;
@@ -225,12 +248,16 @@ body {
   border: none;
   width: 60%;
   margin: 30px auto;
-  transition:all .8s ease;
+  transition:all .5s ease;
   cursor: pointer;
+  /* transition: 0.5s; */
+  background-color: #f1bc68;
 
 }
 .slideshow-slide-text button:hover{
-  scale: 1.1;
+  transform: scale(1.1);
+  background-color: indianred;
+  color: #ffff;
 
 }
 .activeSlide {
@@ -252,15 +279,16 @@ body {
   display: flex;
   /* justify-content: space-between; */
   /* position: relative; */
-  padding: 20px;
+  padding: 30px;
 }
 /* .related-post--container::-webkit-scrollbar {
   display: none;
 } */
 .related-post--content {
   overflow-y: scroll;
-  /* width: 30%; */
-  width: 600px;
+
+  width: 60%;
+  /* width: 600px; */
   height: 400px;
   display: block;
   
@@ -274,20 +302,25 @@ body {
   justify-content: space-between;
   width: 100%;
 
+
   /* margin:  10px; */
 }
 .realted-post--item-image {
   margin:  10px;
-}
-.realted-post--item-image img {
   width: 70px;
   height: 50px;
+  overflow: hidden;
+}
+.realted-post--item-image img {
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 .realted-post--item-title{
-  width: 200px;
+  /* width: 200px; */
+  width: 100%;
 }
 
 .related-post--suggestion {
@@ -332,6 +365,7 @@ body {
   scroll-snap-align: start;
   flex: 0 0 250px;
   transition:all .8s ease;
+
 }
 .suggestion--item img:hover{
   transform: rotateY(-180deg);
@@ -340,7 +374,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
+  overflow: hidden;
 }
 .suggestion--item .province {
   position: absolute;
@@ -351,7 +385,7 @@ body {
   font-size: 30px;
   line-height: 67.5px;
 }
-.realted-post--item-image img:hover , .next_place img:hover , .feature_post img:hover {
+.realted-post--item-image img:hover , .feature_post img:hover {
     scale: 1.1;
   transition:all .8s ease;
 

@@ -42,7 +42,7 @@ const Header = () => {
             <ul className="avatar">
               {str ===
               "https://vivureviews.com/wp-content/uploads/2022/08/avatar-vo-danh-9.png" ? (
-                <div className="public">
+                <div>
                   <li>
                     <Link to="/Login">Login</Link>
                   </li>
