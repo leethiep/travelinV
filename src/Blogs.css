@@ -12,58 +12,49 @@
 }
 body{
   font-family: headings;
+  align-items: center;
+
 }
 .h1-container{
-  position: absolute;
-  width: 1300px;
-  height: 400px;
-  left: 80px;
-  top: 110px;
-  background-image: url(https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/08/chua-cau-hoi-an-vntrip-e1504759723431.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 100px;
-  text-align:  center;
+  top: 50px;
+  line-height: 30px;
+  text-align: center;
+  width: 100%;
+  height: 256px;
+  margin: 55px 0 25px;
 }
 .h1-container h1{
-  font-size: 130px;
   font-family: headings;
-  color: white;
-  display: inline-block;
+  font-weight: 700;
+  font-size: 100px;
+  color: #353535;
+  letter-spacing: -1.5px;
+  line-height: 130px;
+  margin: 110px 0px 10px;
 } 
 .goto-container{
-  position: absolute;
-  width: 1300px;
+  width: 1100px;
   height: 70px;
-  left: 80px;
-  top: 550px;
   background-color: #FCFCFC;
-  border-radius: 30px;
-  border-bottom: 4px solid gray;
-  border-right: 4px solid gray;
-  overflow: hidden;
+  border-radius: 20px;
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
+  margin: auto;
 }
 .goto-container p{
   position: absolute;
   width: auto;
   height: 50px;
-  text-decoration-line: underline;
   margin: 20px;
 }
-/* .goto-container a:hover{
-  background-color: #83ddda;
-} */
 .goto-container ul {
   list-style-type: none;
-  margin: 0;
+  margin: auto;
   padding: 0;
-  overflow: hidden;
   height: 74px;
 }
 .goto-li{
- position: relative;
- margin: 3px 3px ; 
+ margin: 5px 5px ; 
  margin-left: auto;
  height: 50px;
  width: auto;
@@ -80,160 +71,186 @@ body{
   text-align: center;
   display: inline-flex;
   position: relative;
-  border-radius: 20px;
+  border-radius: 100px;
   background-color: #C1E2E1;
   padding: 10px;
 }
 .goto-container a:hover{
   background-color: #8febee;
 }
+.goto-li-ctn{
+  width: 1100px;
+  height: 70px;
+  position: absolute;
+  margin: auto;
+  padding-left: 70px;
+}
+.body-ctn{
+  width: 1100px;
+  height: 1500px;
+  line-height: 30px;
+  margin: auto;
+}
 .featured-container {
   position: absolute;
-  width: 1300px;
-  height: 550px;
-  left: 80px;
-  top: 650px;
+  width: 1100px;
+  height: auto;
+  top: 600px; 
+}
+.featured-post-ctn{
+  display: flex;
+  width: inherit;
+  height: auto;
 }
 .featured-container h2{
-  display: flex;
   font-size: 36px;
+  height: fit-content;
+}
+.featured-img{
+  width: 500px;
+  height: 280px;
 }
 .image-ctn{
-  position: relative;
-  width: 600px;
-  height: 380px;
+  width: 500px;
+  height: 280px;
   overflow: hidden;
   border-radius: 30px;
-  float: left;
 }
 .image-ctn2{
-  float: right;
-  width: 600px;
-  height: 380px;
+  width: 500px;
+  height: 280px;
   overflow: hidden;
   border-radius: 30px;
-  position: relative;
+  margin-left: 100px;
+
 }
 /* .featured-img{
   transform: scale();
   transition-duration: ;
 } */
 .post-name{
-  position: relative;
-  top: 1100px;
-  width: 540px;
-  height: 135px;
-  left: 100px; 
-  font-size: 32px;
+  position: absolute;
+  width: 300px;
+  border-radius: 20px;
+  height: auto;
+  display: inline;
+  line-height: 38px;
+  background-color: white;
+  word-break: break-all;
+  font-size: 20px;
+  font-weight: 700;
   font-style: italic;
-  margin-left: 30px;
   text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: black;
+  color: #353535;
   text-align: center;
+  margin: 20px;
 }
-.post-name2{
-  position: relative;
-  font-size: 32px;
-  font-style: italic;
-  line-height: 40px;
-  text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: black;
-  text-align: center;
-  word-wrap:break-word;
-}
-.div-featured-post2{
-  position:absolute;
-  width:400px;
-  top: 1120px;
-  height:auto;
-  left: 870px;
-}
-.div-featured-post1{
-  position:absolute;
-  width:400px;
-  top: 1120px;
-  height:auto;
-  left: 150px;
-}
-.recent{
-  position: relative;
-  width: 1300px;
-  height: 480px;
-  display: inline-block;
-  top: 1150px;
-  left: 80px;
-  background-color: none;
-  border-radius: 30px;
 
+.recent{
+  position: absolute;
+  width: 1100px;
+  height: 480px;
+  display: flex;
+  background-color: none;
+  top: 950px;
 }
 .recent h2{
   position: absolute;
   align-items: center;
   font-size: 36px;
   margin: 20px 0 20px 0;
-}
-.recent ul{
-  margin-top: 100px;
-}
-.recent li{
-  position: relative;
-  bottom: 10px;
-  margin-left: 70px;
-}
-.img-div1{
-  position: absolute;
-  height: 325px;
-  width: 325px;
-  border-radius: 30px;
-  overflow: hidden;
-  float: left;
-  background-size: cover;
-}
-.recent-img{
-  width: 325px;
-  height: 325px;
-  position: absolute;
-  z-index: -1;
-  border-radius: 30px;
+  width: 1100px;
 }
 .recent p{
   text-align: center;
-  float: left;
   word-wrap: break-word;
   height: auto;
   width: 250px;
   position: relative;
-  margin-left: 150px;
   font-size: 20px;
+}
+.recent-post-ctn{
+  position: relative;
+  height: 300px;
+  width: inherit;
+  display: flex;
+  top: 60px;
+}
+.img-recent-ctn1{
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-right: 100px;
+}
+.img-recent-ctn2{
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-right: 100px;
+}
+.img-recent-ctn3{
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.recent-img{
+  width: 300px;
+  height: 300px;
+  display: inline;
+}
+.recent img:hover{
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+.featured-container img:hover{
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+.post-name-recent{
+  position: absolute;
+  width: 200px;
+  border-radius: 20px;
+  height: auto;
+  display: inline;
+  line-height: 20px;
+  background-color: white;
+  word-wrap: break-word;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #353535;
+  text-align: center;
+  margin: 20px;
 }
 .slider-ctn{
   position: relative;
-  width: 1300px;
+  width: 1100px;
   height: 600px;
-  left: 80px;
   border-radius: 30px;
-  top: 1250px;
   background-color: #EDECEC;
+  top: 850px;
+  overflow: hidden;
 }
-.slider-div{
+/* .slider-div{
   position: absolute;
   width: 750px;
   height: 550px;
   border-radius: 30px;
-  left: 500px;
+
   overflow: hidden;
-  margin-top: 25px;
-}
+
+} */
 .slider-img{
-  width: 750px;
-  height: 550px;
+  width: 1100px;
+  height: 600px;
   background-size: cover;
   z-index: 1;
-}
-img:hover{
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
 }
 .slider-btn{
   position: absolute;
@@ -247,17 +264,11 @@ img:hover{
   user-select: none;
   z-index: 10;
 }
-.slider-div button:hover{
-  background-color: gray;
-}
 #right{
   right: 32px;
 }
 #left{
   left: 32px;
-}
-.a{
-  position: absolute;
 }
 .slide {
   opacity: 0;

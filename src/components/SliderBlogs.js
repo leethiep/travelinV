@@ -35,10 +35,10 @@ const [currentSlide, setCurrentSlide] = useState(0)
           <button className=" slider-btn" id="left" onClick={prevSlide} ><HiChevronLeft/></button>
           <button className=" slider-btn" id="right" onClick={nextSlide} ><HiChevronRight/></button>
             {slideImages.map((slideImage, index) =>(
-                <div key={index}>  
-                    {index === currentSlide && (
+                <div key={index}>
+                  {index === currentSlide && (
                       <img className="slider-img" src={slideImage.url} ></img>)}
-                      </div>
+                  </div>
             )
             )}
         </div>

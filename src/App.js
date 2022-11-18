@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./Pages/Home";
-import ReadBlogs from "./Pages/ReadBlogs";
+import ReadBlogs from "./Pages/Blogs";
 import ProtectedRoutes from "./components/PrivateRouter";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register"

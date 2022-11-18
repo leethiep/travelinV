@@ -28,7 +28,7 @@ const gotoDatas = [
 
 ]
     return(
-        <div>
+        <div className='goto-li-ctn'>
             {gotoDatas.map((gotoData, index)=>
                     <li className="goto-li">
                     <a className="goto-a" href={gotoData.data}>{gotoData.data}</a>
