@@ -1,5 +1,4 @@
 import "../PersonalPage.css";
-import Avt from '../../src/assets/images/avt.png'
 import { BsBookmarkHeartFill } from "react-icons/bs";
 import { BsFillHandbagFill } from "react-icons/bs";
 import { BsFillFilterSquareFill } from "react-icons/bs";
@@ -125,7 +124,7 @@ function HandlCoutEvent(type, id)
     return (
     <div className = "Thang_avatar"> 
         <div id='Thang_avatar_child'>
-            <img src={Avt}/>
+            <img src='https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg'/>
         </div>
         
         <div id='Thang_card'>
