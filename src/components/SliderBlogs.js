@@ -38,6 +38,8 @@ const [currentSlide, setCurrentSlide] = useState(0)
                 <div key={index}>
                   {index === currentSlide && (
                       <img className="slider-img" src={slideImage.url} ></img>)}
+                  {index === currentSlide && (
+                      <span>{slideImage.caption}</span>)}
                   </div>
             )
             )}

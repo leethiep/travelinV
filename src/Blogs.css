@@ -13,7 +13,7 @@
 body{
   font-family: headings;
   align-items: center;
-
+  color: #353535;
 }
 .h1-container{
   top: 50px;
@@ -21,7 +21,7 @@ body{
   text-align: center;
   width: 100%;
   height: 256px;
-  margin: 55px 0 25px;
+  margin: 20px 0 0;
 }
 .h1-container h1{
   font-family: headings;
@@ -62,18 +62,17 @@ body{
 }
 .goto-container span{
   margin: 10px;
-  text-decoration: underline;
   float: left;
   margin-top: 20px;
 }
 .goto-a{
-  margin-top: 10px;
+  margin-top: 13px;
   text-align: center;
   display: inline-flex;
   position: relative;
-  border-radius: 100px;
+  border-radius: 20px;
   background-color: #C1E2E1;
-  padding: 10px;
+  padding: 4px;
 }
 .goto-container a:hover{
   background-color: #8febee;
@@ -105,24 +104,24 @@ body{
 .featured-container h2{
   font-size: 36px;
   height: fit-content;
+  margin-bottom: 10px;
 }
 .featured-img{
-  width: 500px;
+  width: 540px;
   height: 280px;
 }
 .image-ctn{
-  width: 500px;
+  width: 540px;
   height: 280px;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 .image-ctn2{
-  width: 500px;
+  width: 540px;
   height: 280px;
   overflow: hidden;
-  border-radius: 30px;
-  margin-left: 100px;
-
+  border-radius: 5px;
+  margin-left: 20px;
 }
 /* .featured-img{
   transform: scale();
@@ -131,7 +130,7 @@ body{
 .post-name{
   position: absolute;
   width: 300px;
-  border-radius: 20px;
+  border-radius: 5px;
   height: auto;
   display: inline;
   line-height: 38px;
@@ -160,6 +159,7 @@ body{
   font-size: 36px;
   margin: 20px 0 20px 0;
   width: 1100px;
+  color: #353535;
 }
 .recent p{
   text-align: center;
@@ -177,27 +177,27 @@ body{
   top: 60px;
 }
 .img-recent-ctn1{
-  width: 300px;
+  width: 353px;
   height: 300px;
-  border-radius: 30px;
+  border-radius: 5px;
   overflow: hidden;
-  margin-right: 100px;
+  margin-right: 20px;
 }
 .img-recent-ctn2{
-  width: 300px;
+  width: 353px;
   height: 300px;
-  border-radius: 30px;
+  border-radius: 5px;
   overflow: hidden;
-  margin-right: 100px;
+  margin-right: 20px;
 }
 .img-recent-ctn3{
-  width: 300px;
+  width: 353px;
   height: 300px;
-  border-radius: 30px;
+  border-radius: 5px;
   overflow: hidden;
 }
 .recent-img{
-  width: 300px;
+  width: 354px;
   height: 300px;
   display: inline;
 }
@@ -214,7 +214,7 @@ body{
 .post-name-recent{
   position: absolute;
   width: 200px;
-  border-radius: 20px;
+  border-radius: 5px;
   height: auto;
   display: inline;
   line-height: 20px;
@@ -232,20 +232,11 @@ body{
   position: relative;
   width: 1100px;
   height: 600px;
-  border-radius: 30px;
+  border-radius: 5px;
   background-color: #EDECEC;
   top: 850px;
   overflow: hidden;
 }
-/* .slider-div{
-  position: absolute;
-  width: 750px;
-  height: 550px;
-  border-radius: 30px;
-
-  overflow: hidden;
-
-} */
 .slider-img{
   width: 1100px;
   height: 600px;
