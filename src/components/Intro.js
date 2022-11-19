@@ -11,7 +11,7 @@ function Intro() {
           <em className="welcome_text">
             Hi, welcome to Travel inVietNam
             <br />
-            We create inspiring <span>travel blogs</span>
+            We create inspiring <a>travel blogs</a>
             about the world’s most beautiful places to make planning your
             holiday a piece of cake!
           </em>
