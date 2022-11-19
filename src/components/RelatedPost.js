@@ -105,7 +105,7 @@ function RelatedPost() {
         {posts1.map((post) => {
           const { id, title, img } = post;
           return (
-            <div className="related-post--item" key={id}>
+            <a href='#' className="related-post--item" key={id}>
               {/* <img src={img} alt={post.title} /> */}
               <div className="realted-post--item-image">
                 <img src={window.location.origin + related2} />
@@ -113,7 +113,7 @@ function RelatedPost() {
               <div className="realted-post--item-title">
                 <p> {title}</p>
               </div>
-            </div>
+            </a>
           );
         })}
       </div>

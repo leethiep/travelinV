@@ -1,0 +1,331 @@
+.Thang_avatar {
+    text-align: center;
+  }
+  
+  #Thang_avatar_child img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-top: 75px;
+    /* -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg); */
+  }
+  
+  #Thang_card{
+    display: inline-block;
+    width: 900px;
+    height: 300px;
+    top: 200px;
+    position: absolute;
+    z-index: -1;
+    background-color: #C1E2E1;
+    border-radius: 20px;
+  }
+  
+  #Thang_content0{
+    display: inline-block;
+    position: relative;
+    width: 900px;
+    height: 400px;
+    /* background-color: rgb(169, 136, 5); */
+    background-color: none;
+    border-radius: 10px;
+    top: -85px;
+  }
+  #Thang_content0 button:hover {
+    color:black;
+  }
+  
+  .Thang_name {
+    display: block;
+    font-size: 35px;
+    margin-top: 100px;
+    font-family: "Merriweather Sans";
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  #Thang_setting {
+    display: inline-block;
+    position: absolute;
+    border: none;
+    color:#353535;
+    background-color: inherit;
+    font-size: 40px;
+    top: 20px;
+    right: 20px;
+  
+  }
+  
+  #Thang_setting:hover {  color: black;}
+  
+  
+  #Thang_tab {
+    display: inline-flex;
+  }
+  
+  #Thang_tab p {
+    margin: 30px 40px;
+    font-size: 20px;
+    font-family: "Merriweather Sans";
+  }
+  
+  
+  #Thang_content {
+    display: block;
+    margin-top: -9px;
+  
+  }
+
+  .Thang_a{
+    display: inline-block;
+  }
+  
+  #Thang_content button {
+    width: 250px;
+    height: 60px;
+    display: inline;
+    font-size: 27px;
+    border:none;
+    background-color: inherit;
+    margin: 0 60px;
+    color: rgb(117, 115, 115);
+    text-align: center;
+    font-family: "Merriweather Sans"
+  }
+  
+  #Thang_content button:hover{
+    font-weight:bold;
+    color: black;
+  }
+  
+  #Thang_content p {
+    display: inline-block;
+    margin: 0px;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  
+  
+  #Thang_content div {
+    display: block;
+    text-align: center;
+  }
+  
+  #Thang_hr {
+    width:1090px;
+    text-align: center;
+    margin-top: -100px;
+  }
+  
+  /* .Thang_a {
+    display: inline;
+    position: absolute;
+    background-color: red;
+  } */
+  
+  #Thang_content1 {
+    display: inline-block;
+    margin-top: 50px;
+    width: 1110px;
+    height: auto;
+    text-align: left;
+  }
+  
+  #Thang_content1 > div {
+    display: inline-block;
+    position: relative;
+    width: 350px;
+    height: 467px;
+    overflow: hidden;
+    border-radius: 7;
+    border-radius: 5%;
+    margin: 10px;
+  }
+  
+  #Thang_content1 img {
+    display: inline-block;
+    width: 350px;
+    height: 467px;
+    border-radius: 5%;
+    transition: 1s;
+  }
+  
+  #Thang_content1 img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  
+  #Thang_CONTENT {
+    display: inline-block;
+    position: absolute;
+    font-style: italic;
+    color: white;
+  }
+  
+  #Thang_CONTENT_mokuji {
+    display: inline-block;
+    position: absolute;
+    width: 310px;
+    height: 0px;
+    top: 20px;
+    margin: 0;
+    color: white;
+    text-align: right;
+  }
+  
+  #Thang_CONTENT_mokuji > button{
+    display: inline-block;
+    font-size: 35px;
+    font-weight: bold;
+    background: none;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    margin-right: 5px;
+  }
+  
+  #Thang_div_mokuji {
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 90px;
+    background-color: white;
+    margin-left: 185px;
+    border-radius: 3%;
+    font-size: 10px;
+    text-align: center;
+  }
+  
+  /* #mokuji_edit {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px;
+    border: none;
+    background-color: white;
+  } */
+  
+  #Thang_mokuji_remove {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    border:none;
+    background-color: white;
+  }
+  
+  
+  #Thang_CONTENT_mokuji > button:hover{
+    font-size: 38px;
+    background: none;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 15px;
+    margin-right: 5px;
+  }
+  
+  #Thang_CONTENT_mokuji > button:focus{
+    font-size: 38px;
+  }
+  /* ----------------------------------------- */
+  
+  #Thang_text_right {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 35px;
+  }
+  
+  .Thang_li {
+    display: inline-block;
+    width: 50px;
+    height: auto;
+    line-height: 33px;
+    position: relative;
+    font-size: 20px;
+  }
+  
+  .Thang_edit_remove {
+    display: inline;
+    background: white;
+    list-style-type: none;
+    width: 100px;
+    height: auto;
+    padding: 0;
+    margin-top: -5px;
+    margin-left: -54px;
+  }
+  
+  #Thang_bstextright{
+    color: white;
+  }
+  
+  .Thang_span{
+    vertical-align: -7%;
+  }
+  
+  .Thang_button_event {
+    text-decoration: none;
+    color: #747474;
+    display: inline-block;
+    font-size: 15px;
+    /* margin-top: -100px; */
+    background: none;
+    border: none;
+  }
+  
+  .Thang_button_event:hover {
+    background: none;
+    color: black;
+  }
+  
+  /* .Thang_button_event:focus {
+    color: red;
+  } */
+  
+  .Thang_edit_remove {
+    display: none;
+    /* display: block; */
+    position: absolute;
+    border-radius: 5%;
+    text-align: center;
+   }
+  
+  .Thang_edit_remove .Thang_li {
+    width: 100px;
+    height: 35px;
+    margin: 0;
+  }
+  
+  .Thang_li:hover .Thang_edit_remove {
+    display: block;
+    border-radius: 5%;
+  }
+  
+  .Thang_edit_remove .Thang_li {
+    margin-left: 0 !important;
+   }
+  /* ------------------------------------------------- */
+  
+  #Thang_content1 h1 {
+    display: block;
+    text-align: justify;
+    margin: 15px;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    font-family: "Merriweather Sans";
+    font-weight: 500;
+  }
+  
+  #Thang_content1 p {
+    display: block;
+    margin: 0px 15px 0px;
+    bottom: 20px;
+    left: 0;
+  }
+  
+  
