@@ -1,12 +1,21 @@
 .Thang_avatar {
+    display: block;
     text-align: center;
+    height: auto;
   }
+
+  /* #Thang_avatar_child{
+    display: inline-block;
+    width: 100%;
+    margin-top: 90px;
+  } */
   
   #Thang_avatar_child img{
+    display: inline-block;
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    margin-top: 75px;
+    margin-top: 90px;
     /* -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
@@ -16,8 +25,8 @@
   
   #Thang_card{
     display: inline-block;
-    width: 900px;
-    height: 300px;
+    width: 850px;
+    height: 320px;
     top: 200px;
     position: absolute;
     z-index: -1;
@@ -28,12 +37,14 @@
   #Thang_content0{
     display: inline-block;
     position: relative;
-    width: 900px;
-    height: 400px;
+    width: 850px;
+    height: 320px;
     /* background-color: rgb(169, 136, 5); */
     background-color: none;
+    /* background-color: #C1E2E1; */
     border-radius: 10px;
     top: -85px;
+    /* z-index: -1; */
   }
   #Thang_content0 button:hover {
     color:black;
@@ -42,7 +53,7 @@
   .Thang_name {
     display: block;
     font-size: 35px;
-    margin-top: 100px;
+    margin-top: 110px;
     font-family: "Merriweather Sans";
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -55,22 +66,61 @@
     color:#353535;
     background-color: inherit;
     font-size: 40px;
-    top: 20px;
+    top: 5px;
     right: 20px;
+
+
+    /* height: 60px; */
+    /* background-color: red; */
   
+  }
+
+  #Thang_edit_setting {
+    display: inline-block;
+    overflow: hidden;
   }
   
   #Thang_setting:hover {  color: black;}
-  
+
+  #Thang_edit_setting #Thang_edit {
+    display: none;
+    /* display: inline-block; */
+    position: absolute;
+    background-color: #f8f8f8;
+    top: 55px;
+    right: 29px;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    overflow: hidden;
+
+  }
+
+  #Thang_setting:hover + #Thang_edit {
+    display: inline-block;
+  }
+
+  #Thang_edit_setting #Thang_edit:hover{
+    display: inline-block;
+    background-color: #e3e1e1;
+    font-weight: 600;
+    font-size: 13px;
+
+  }
   
   #Thang_tab {
     display: inline-flex;
   }
   
-  #Thang_tab p {
+  .Thang_tab_content {
     margin: 30px 40px;
     font-size: 20px;
     font-family: "Merriweather Sans";
+  }
+
+  .Thang_tab_content > span{
+    font-weight: 700;
   }
   
   
@@ -96,6 +146,10 @@
     text-align: center;
     font-family: "Merriweather Sans"
   }
+
+  #Thang_content span{
+    vertical-align: -4px;
+  }
   
   #Thang_content button:hover{
     font-weight:bold;
@@ -118,7 +172,7 @@
   #Thang_hr {
     width:1090px;
     text-align: center;
-    margin-top: -100px;
+    margin-top: 0px;
   }
   
   /* .Thang_a {
@@ -133,6 +187,8 @@
     width: 1110px;
     height: auto;
     text-align: left;
+    letter-spacing: -1px;
+    font-family: "Merriweather Sans";
   }
   
   #Thang_content1 > div {
@@ -141,9 +197,8 @@
     width: 350px;
     height: 467px;
     overflow: hidden;
-    border-radius: 7;
     border-radius: 5%;
-    margin: 10px;
+    margin: 7px 10px;
   }
   
   #Thang_content1 img {
@@ -169,9 +224,10 @@
   #Thang_CONTENT_mokuji {
     display: inline-block;
     position: absolute;
-    width: 310px;
-    height: 0px;
-    top: 20px;
+    width: 320px;
+    height: 0;
+    top: 10px;
+    /* background-color: red; */
     margin: 0;
     color: white;
     text-align: right;
@@ -195,7 +251,7 @@
     height: 90px;
     background-color: white;
     margin-left: 185px;
-    border-radius: 3%;
+    border-radius: 50%;
     font-size: 10px;
     text-align: center;
   }
@@ -265,7 +321,7 @@
   }
   
   .Thang_span{
-    vertical-align: -7%;
+    vertical-align: -2px;
   }
   
   .Thang_button_event {
@@ -279,7 +335,6 @@
   }
   
   .Thang_button_event:hover {
-    background: none;
     color: black;
   }
   
@@ -291,7 +346,8 @@
     display: none;
     /* display: block; */
     position: absolute;
-    border-radius: 5%;
+    /* border-radius: 50%; */
+    border-radius: 5px;
     text-align: center;
    }
   
@@ -300,13 +356,62 @@
     height: 35px;
     margin: 0;
   }
+
+  .Thang_edit_remove .Thang_li:hover {
+    background-color: #bdbdbd;
+    border-radius: 5px;
+  }
   
   .Thang_li:hover .Thang_edit_remove {
     display: block;
-    border-radius: 5%;
+    border-radius: 5px;
   }
   
   .Thang_edit_remove .Thang_li {
+    margin-left: 0 !important;
+   }
+   /*  */
+   #Thang_li1 {
+    width: 100px;
+    height: 35px;
+    margin: 0;
+  }
+
+  #Thang_li1:hover {
+    background-color: #eaeaea;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  #Thang_li1:hover .Thang_edit_remove {
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  #Thang_li1 {
+    margin-left: 0 !important;
+   }
+   /*  */
+   #Thang_li2 {
+    width: 100px;
+    height: 35px;
+    margin: 0;
+  }
+
+  #Thang_li2:hover {
+    background-color: #bdbdbd;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  #Thang_li2:hover .Thang_edit_remove {
+    display: block;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  #Thang_li2 {
     margin-left: 0 !important;
    }
   /* ------------------------------------------------- */
@@ -315,9 +420,8 @@
     display: block;
     text-align: justify;
     margin: 15px;
+    margin-top: 3px;
     font-size: 30px;
-    letter-spacing: -0.5px;
-    font-family: "Merriweather Sans";
     font-weight: 500;
   }
   
@@ -327,5 +431,12 @@
     bottom: 20px;
     left: 0;
   }
+
+  /* #Thang_content_Author {
+    display: block;
+    margin: 0 15px;
+    margin-bottom: -10px;
+    color: red;
+  } */
   
   
