@@ -24,13 +24,13 @@ const Bag=[
     {
      "Image": "https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg",
      "Title": "Đà Lạt",
-     "Time": "26/03/2022-05/04/2022",
+     "Time": "26/03/2022 - 05/04/2022",
      "id": "1"
     },
     {
      "Image": "https://i.pinimg.com/564x/6b/30/ef/6b30efc71a14e507e3821e5e6330ad30.jpg",
      "Title": "Bình Định",
-     "Time": "26/03/2022-05/04/2022",
+     "Time": "26/03/2022 - 05/04/2022",
      "id": "2"
     }
 ]
@@ -114,29 +114,40 @@ export default function PersonalPage() {
 function HandlCoutEvent(type, id)
 {
     if(type===Event_bv.id)
-        return <ul className='Thang_edit_remove'><li className='Thang_li'><button className='Thang_button_event'><span className='Thang_span'><MdEdit id='mdedit'></MdEdit></span> Edit</button></li><li><button className='Thang_button_event' onClick={()=>{const NewPosts=Content.filter(post=>post.id !== id); setContent(NewPosts); setCountPost(NewPosts.length)}}><span><MdOutlineBookmarkRemove id='mdremove'></MdOutlineBookmarkRemove></span> Remove</button></li></ul>
+        return <ul className='Thang_edit_remove'><li id='Thang_li1'><button className='Thang_button_event'><span className='Thang_span'><MdEdit id='mdedit'></MdEdit></span> Edit</button></li><li id='Thang_li2' onClick={()=>{const NewPosts=Content.filter(post=>post.id !== id); setContent(NewPosts); setCountPost(NewPosts.length)}}><button className='Thang_button_event' ><span className='Thang_span'><MdOutlineBookmarkRemove id='mdremove'></MdOutlineBookmarkRemove></span> Remove</button></li></ul>
     else if (type===Event_like.id)
-            return <ul className='Thang_edit_remove'><li className='Thang_li'><button className='Thang_button_event' onClick={()=>{const NewPostLike=Content.filter(postlike=>postlike.id !== id); setContent(NewPostLike); setCountPostLike(NewPostLike.length)}}><span className='Thang_span'><RiDislikeLine id='mdremove'></RiDislikeLine></span> Unlike</button></li></ul>
+            return <ul className='Thang_edit_remove'><li className='Thang_li' onClick={()=>{const NewPostLike=Content.filter(postlike=>postlike.id !== id); setContent(NewPostLike); setCountPostLike(NewPostLike.length)}}><button className='Thang_button_event' ><span className='Thang_span'><RiDislikeLine id='mdremove'></RiDislikeLine></span> Unlike</button></li></ul>
         else if (type===Event_td.id)
-            return <ul className='Thang_edit_remove'><li className='Thang_li'><button className='Thang_button_event' onClick={()=>{const NewBag=Content.filter(bag=>bag.id !== id); setContent(NewBag); setCountBag(NewBag.length)}}><span className='Thang_span'><MdOutlineBookmarkRemove id='mdremove'></MdOutlineBookmarkRemove></span> Remove</button></li></ul>
+            return <ul className='Thang_edit_remove'><li className='Thang_li' onClick={()=>{const NewBag=Content.filter(bag=>bag.id !== id); setContent(NewBag); setCountBag(NewBag.length)}}><button className='Thang_button_event' ><span className='Thang_span'><MdOutlineBookmarkRemove id='mdremove'></MdOutlineBookmarkRemove></span> Remove</button></li></ul>
+}
+
+function HandlCoutContent(type, location, time)
+{
+    if(type===Event_bv.id || type===Event_like.id)
+        return <p>{location}&nbsp;&nbsp;&nbsp;&nbsp;{time}</p>
+    else
+        return <p>{time}</p>
 }
 
     return (
     <div className = "Thang_avatar"> 
         <div id='Thang_avatar_child'>
             <img src='https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg'/>
+            
         </div>
-        
         <div id='Thang_card'>
-        </div>
+            </div>
 
         <div id='Thang_content0'>
-            <button id='Thang_setting'> <RiSettings4Fill></RiSettings4Fill></button>
+            <div id="Thang_edit_setting">
+                <button id='Thang_setting'> <RiSettings4Fill></RiSettings4Fill></button>
+                    <button id="Thang_edit">Chỉnh sửa thông tin cá nhân</button>
+            </div>
             <p className='Thang_name'>{Name}</p>  
             <div id='Thang_tab'>
-                <p>{CountPost} {tabs[0].name}</p>
-                <p>{CountPostLike} {tabs[1].name}</p>
-                <p>{CountBag} {tabs[2].name}</p>
+                <p className="Thang_tab_content"><span>{CountPost}</span> {tabs[0].name}</p>
+                <p className="Thang_tab_content"><span>{CountPostLike}</span> {tabs[1].name}</p>
+                <p className="Thang_tab_content"><span>{CountBag}</span> {tabs[2].name}</p>
             </div>
         </div>
         <div>
@@ -154,7 +165,7 @@ function HandlCoutEvent(type, id)
                         } : {}}
                     onClick={()=>setType(tab.name)}
                 > 
-                <div>{tab.style}<p>{tab.name}</p></div>
+                <div><span>{tab.style}</span><p>{tab.name}</p></div>
                 </button>
             ))}
            
@@ -170,10 +181,9 @@ function HandlCoutEvent(type, id)
                         </li>
                     </p>
                     <p id='Thang_CONTENT'>
-                        <p>{Content0.Author}</p>
-                        <h1>{Content0.Title}</h1>
-                        <p>{Content0.Location} {Content0.Time}</p>
-                    </p>
+                        <p >{Content0.Author}</p>
+                        <h1 id='Thang_Content_Author'>{Content0.Title}</h1>
+                        {HandlCoutContent(type, Content0.Location, Content0.Time)}                   </p>
                 </div>
             ))}
         </div>
