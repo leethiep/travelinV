@@ -4,7 +4,7 @@ import { BsFillHandbagFill } from "react-icons/bs";
 import { BsFillFilterSquareFill } from "react-icons/bs";
 import {useEffect} from 'react';
 import {useState} from 'react';
-import { RiSettings4Fill } from "react-icons/ri";
+import { FaEdit } from "react-icons/fa";
 import { BsTextRight } from "react-icons/bs";
 import { MdEdit } from "react-icons/md";
 import { MdOutlineBookmarkRemove } from "react-icons/md";
@@ -140,7 +140,7 @@ function HandlCoutContent(type, location, time)
 
         <div id='Thang_content0'>
             <div id="Thang_edit_setting">
-                <button id='Thang_setting'> <RiSettings4Fill></RiSettings4Fill></button>
+                <button id='Thang_setting'> <FaEdit></FaEdit></button>
                     <button id="Thang_edit">Chỉnh sửa thông tin cá nhân</button>
             </div>
             <p className='Thang_name'>{Name}</p>  
