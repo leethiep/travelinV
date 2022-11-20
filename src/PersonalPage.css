@@ -65,7 +65,7 @@
     border: none;
     color:#353535;
     background-color: inherit;
-    font-size: 40px;
+    font-size: 30px;
     top: 5px;
     right: 20px;
 
@@ -87,7 +87,7 @@
     /* display: inline-block; */
     position: absolute;
     background-color: #f8f8f8;
-    top: 55px;
+    top: 45px;
     right: 29px;
     border-radius: 20px;
     width: 200px;
