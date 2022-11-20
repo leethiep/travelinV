@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<PersonalPage />} />
-          <Route path="/Blogs" element={<ReadBlogs />} />
+          <Route path="/Blogs" element={<Blogs />} />
           {/* <Route path="/Blogs/:relatedPostID" element={<Blogs />} /> */}
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
