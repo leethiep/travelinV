@@ -1,11 +1,10 @@
 import "../PersonalPage.css";
-import Avt from '../../src/assets/images/avt.png'
 import { BsBookmarkHeartFill } from "react-icons/bs";
 import { BsFillHandbagFill } from "react-icons/bs";
 import { BsFillFilterSquareFill } from "react-icons/bs";
 import {useEffect} from 'react';
 import {useState} from 'react';
-import { RiSettings4Fill } from "react-icons/ri";
+import { FaEdit } from "react-icons/fa";
 import { BsTextRight } from "react-icons/bs";
 import { MdEdit } from "react-icons/md";
 import { MdOutlineBookmarkRemove } from "react-icons/md";
@@ -23,51 +22,51 @@ const Event_td={id: 'Bag'/*, content: <ul id='edit_remove'><li><button className
 
 const Bag=[
     {
-     "Image": "https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg",
-     "Title": "Đà Lạt",
-     "Time": "26/03/2022-05/04/2022",
+     "Image": "https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/316241281_2167460543438400_1162359507881539794_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=gmlGm8qGSQkAX9ezcEg&tn=LBhcdzXBroSyhQQ6&_nc_ht=scontent-tpe1-1.xx&oh=00_AfBpMod-KAnhRo_craBySBywdAU-tH-NricAQ4IlqPUkMQ&oe=637F737B",
+     "Title": "Đà Nẵng",
+     "Time": "20/02/2022 - 05/03/2022",
      "id": "1"
     },
     {
-     "Image": "https://i.pinimg.com/564x/6b/30/ef/6b30efc71a14e507e3821e5e6330ad30.jpg",
+     "Image": "https://khongsolac.com/wp-content/uploads/2019/09/flc-quy-nhon-5.jpg",
      "Title": "Bình Định",
-     "Time": "26/03/2022-05/04/2022",
+     "Time": "21/05/2022 - 05/06/2022",
      "id": "2"
     }
 ]
 
 const PostsLike=[
     {
-     "Title": "Những điều cần biết khi đến Đà Lạt",
-     "Location": "Đà Lạt",
-     "Time": "26/03/2002",
-     "Image": "https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg",
-     "Author": "Tấn Tài",
-     "id": "1"
+        "Title": "Đà Nẵng liệu có phải là nơi đáng sống",
+        "Location": "Đà Nẵng",
+        "Time": "26/09/2022",
+        "Image": "https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/316241281_2167460543438400_1162359507881539794_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=gmlGm8qGSQkAX9ezcEg&tn=LBhcdzXBroSyhQQ6&_nc_ht=scontent-tpe1-1.xx&oh=00_AfBpMod-KAnhRo_craBySBywdAU-tH-NricAQ4IlqPUkMQ&oe=637F737B",
+        "Author": "Lê Thiệp",
+        "id": "1"
+    },
+    {
+        "Title": "Hành trình khám phá nét đẹp hoài cổ đầy độc đáo",
+        "Location": "Quảng Nam",
+        "Time": "20/11/2022",
+        "Image": "https://statics.vinpearl.com/du-lich-pho-co-hoi-an-5654_1628254007.jpg",
+        "Author": "Phú Sỹ",
+        "id": "2"
     },
     {
      "Title": "Địa điểm du lịch Bình Định nổi tiếng không thể bỏ qua",
      "Location": "Bình Định",
-     "Time": "26/03/2002",
-     "Image": "https://i.pinimg.com/564x/6b/30/ef/6b30efc71a14e507e3821e5e6330ad30.jpg",
+     "Time": "10/10/2022",
+     "Image": "https://khongsolac.com/wp-content/uploads/2019/09/flc-quy-nhon-5.jpg",
      "Author": "Sơn Trần",
-     "id": "2"
-    },
-    {
-     "Title": "Đà Nẵng liệu có phải là nơi đáng sống",
-     "Location": "Đà Nẵng",
-     "Time": "26/03/2002",
-     "Image": "https://i.pinimg.com/564x/6b/30/ef/6b30efc71a14e507e3821e5e6330ad30.jpg",
-     "Author": "Lê Thiệp",
      "id": "3"
     },
     {
-     "Title": "Những điều nhất định phải thử ở Đà Lạt",
-     "Location": "Đà Lạt",
-     "Time": "20/10/2022",
-     "Image": "https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg",
-     "Author": "Phú Sỹ",
-     "id": "4"
+        "Title": "Những điều cần biết khi đến Đà Lạt",
+        "Location": "Đà Lạt",
+        "Time": "10/10/2022",
+        "Image": "https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg",
+        "Author": "Tấn Tài",
+        "id": "4"
     }
 ]
 
@@ -75,23 +74,23 @@ const Posts=[
     {
      "Title": "Những điều cần biết khi đến Đà Lạt",
      "Location": "Đà Lạt",
-     "Time": "26/03/2002",
+     "Time": "10/10/2022",
      "Image": "https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg",
-     "id": "3"
+     "id": "1"
     },
     {
      "Title": "Địa điểm du lịch Bình Định nổi tiếng không thể bỏ qua",
      "Location": "Bình Định",
-     "Time": "26/03/2002",
-     "Image": "https://i.pinimg.com/564x/6b/30/ef/6b30efc71a14e507e3821e5e6330ad30.jpg",
+     "Time": "10/10/2022",
+     "Image": "https://khongsolac.com/wp-content/uploads/2019/09/flc-quy-nhon-5.jpg",
      "id": "2"
     },
     {
      "Title": "Đà Nẵng liệu có phải là nơi đáng sống",
      "Location": "Đà Nẵng",
-     "Time": "26/03/2002",
-     "Image": "https://i.pinimg.com/564x/6b/30/ef/6b30efc71a14e507e3821e5e6330ad30.jpg",
-     "id": "1"
+     "Time": "26/09/2022",
+     "Image": "https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/316241281_2167460543438400_1162359507881539794_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=gmlGm8qGSQkAX9ezcEg&tn=LBhcdzXBroSyhQQ6&_nc_ht=scontent-tpe1-1.xx&oh=00_AfBpMod-KAnhRo_craBySBywdAU-tH-NricAQ4IlqPUkMQ&oe=637F737B",
+     "id": "3"
     }
 ]
 
@@ -115,29 +114,39 @@ export default function PersonalPage() {
 function HandlCoutEvent(type, id)
 {
     if(type===Event_bv.id)
-        return <ul className='Thang_edit_remove'><li className='Thang_li'><button className='Thang_button_event'><span className='Thang_span'><MdEdit id='mdedit'></MdEdit></span> Edit</button></li><li><button className='Thang_button_event' onClick={()=>{const NewPosts=Content.filter(post=>post.id !== id); setContent(NewPosts); setCountPost(NewPosts.length)}}><span><MdOutlineBookmarkRemove id='mdremove'></MdOutlineBookmarkRemove></span> Remove</button></li></ul>
+        return <ul className='Thang_edit_remove'><li id='Thang_li1'><span className='Thang_span'><MdEdit id='mdedit'></MdEdit></span> Edit</li><li id='Thang_li2' onClick={()=>{const NewPosts=Content.filter(post=>post.id !== id); setContent(NewPosts); setCountPost(NewPosts.length)}}><span className='Thang_span'><MdOutlineBookmarkRemove id='mdremove'></MdOutlineBookmarkRemove></span> Remove</li></ul>
     else if (type===Event_like.id)
-            return <ul className='Thang_edit_remove'><li className='Thang_li'><button className='Thang_button_event' onClick={()=>{const NewPostLike=Content.filter(postlike=>postlike.id !== id); setContent(NewPostLike); setCountPostLike(NewPostLike.length)}}><span className='Thang_span'><RiDislikeLine id='mdremove'></RiDislikeLine></span> Unlike</button></li></ul>
+            return <ul className='Thang_edit_remove'><li className='Thang_li' onClick={()=>{const NewPostLike=Content.filter(postlike=>postlike.id !== id); setContent(NewPostLike); setCountPostLike(NewPostLike.length)}}><span className='Thang_span'><RiDislikeLine id='mdremove'></RiDislikeLine></span> Unlike</li></ul>
         else if (type===Event_td.id)
-            return <ul className='Thang_edit_remove'><li className='Thang_li'><button className='Thang_button_event' onClick={()=>{const NewBag=Content.filter(bag=>bag.id !== id); setContent(NewBag); setCountBag(NewBag.length)}}><span className='Thang_span'><MdOutlineBookmarkRemove id='mdremove'></MdOutlineBookmarkRemove></span> Remove</button></li></ul>
+            return <ul className='Thang_edit_remove'><li className='Thang_li' onClick={()=>{const NewBag=Content.filter(bag=>bag.id !== id); setContent(NewBag); setCountBag(NewBag.length)}}><span className='Thang_span'><MdOutlineBookmarkRemove id='mdremove'></MdOutlineBookmarkRemove></span> Remove</li></ul>
+}
+
+function HandlCoutContent(type, location, time)
+{
+    if(type===Event_bv.id || type===Event_like.id)
+        return <p>{location}&nbsp;&nbsp;&nbsp;&nbsp;{time}</p>
+    else
+        return <p>{time}</p>
 }
 
     return (
     <div className = "Thang_avatar"> 
         <div id='Thang_avatar_child'>
-            <img src={Avt}/>
+            <img src='https://i.pinimg.com/564x/da/ca/ec/dacaecc0b7fe84c6bebf8c142033f265.jpg'/>  
         </div>
-        
         <div id='Thang_card'>
-        </div>
+            </div>
 
         <div id='Thang_content0'>
-            <button id='Thang_setting'> <RiSettings4Fill></RiSettings4Fill></button>
+            <ul id="Thang_edit_setting">
+                <button id='Thang_setting'> <FaEdit></FaEdit></button>
+                <button id="Thang_edit">Chỉnh sửa thông tin cá nhân</button>
+            </ul>
             <p className='Thang_name'>{Name}</p>  
             <div id='Thang_tab'>
-                <p>{CountPost} {tabs[0].name}</p>
-                <p>{CountPostLike} {tabs[1].name}</p>
-                <p>{CountBag} {tabs[2].name}</p>
+                <p className="Thang_tab_content"><span>{CountPost}</span> {tabs[0].name}</p>
+                <p className="Thang_tab_content"><span>{CountPostLike}</span> {tabs[1].name}</p>
+                <p className="Thang_tab_content"><span>{CountBag}</span> {tabs[2].name}</p>
             </div>
         </div>
         <div>
@@ -155,7 +164,7 @@ function HandlCoutEvent(type, id)
                         } : {}}
                     onClick={()=>setType(tab.name)}
                 > 
-                <div>{tab.style}<p>{tab.name}</p></div>
+                <div><span>{tab.style}</span><p>{tab.name}</p></div>
                 </button>
             ))}
            
@@ -171,10 +180,9 @@ function HandlCoutEvent(type, id)
                         </li>
                     </p>
                     <p id='Thang_CONTENT'>
-                        <p>{Content0.Author}</p>
-                        <h1>{Content0.Title}</h1>
-                        <p>{Content0.Location} {Content0.Time}</p>
-                    </p>
+                        <p >{Content0.Author}</p>
+                        <h1 id='Thang_Content_Author'>{Content0.Title}</h1>
+                        {HandlCoutContent(type, Content0.Location, Content0.Time)}                   </p>
                 </div>
             ))}
         </div>
