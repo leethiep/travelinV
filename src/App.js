@@ -21,7 +21,7 @@ function App() {
     <UserContext.Provider value={{ user, setUser }}>
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route index element={<PersonalPage />} />
+          <Route index element={<Home />} />
           <Route path="/Blogs" element={<Blogs />} />
           {/* <Route path="/Blogs/:relatedPostID" element={<Blogs />} /> */}
           <Route path="/Login" element={<Login />} />
