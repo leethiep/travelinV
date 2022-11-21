@@ -64,13 +64,13 @@ body{
   margin-top: 20px;
 }
 .goto-a{
-  margin-top: 13px;
+  margin: 13px 3px 3px 0;
   text-align: center;
   display: inline-flex;
   position: relative;
   border-radius: 20px;
   background-color: #C1E2E1;
-  padding: 4px;
+  padding:  4px 15px;
 }
 .goto-container a:hover{
   background-color: #8febee;
@@ -84,7 +84,7 @@ body{
 }
 .body-ctn{
   width: 1100px;
-  height: 1500px;
+  height: 800px;
   line-height: 30px;
   margin: auto;
 }
@@ -128,10 +128,9 @@ body{
 .post-name{
   position: absolute;
   width: 300px;
-  border-radius: 5px;
+  border-radius: 1px;
   height: auto;
   display: inline;
-  line-height: 38px;
   background-color: white;
   word-wrap: break-word;
   font-size: 20px;
@@ -139,6 +138,9 @@ body{
   color: #353535;
   text-align: left;
   margin: 20px;
+  padding: 5px;
+  letter-spacing: -0.2px;
+  z-index: 10;
 }
 
 .recent{
@@ -222,27 +224,26 @@ body{
   color: #353535;
   text-align: left;
   margin: 20px;
+  padding: 5px;
+  z-index: 10;
 }
 .slider-ctn{
   position: relative;
-  width: 1100px;
-  height: 600px;
+  width: 100%;
+  height: 500px;
   border-radius: 5px;
   background-color: #EDECEC;
-  top: 850px;
   overflow: hidden;
-  font-display: uppercase;
 }
 .slider-img{
-  width: 1100px;
-  height: 600px;
+  width: 100%;
+  height: 500px;
   background-size: cover;
 }
 .slider-title{
  position: absolute;
  top: 30%;
- left: 10%;
- padding: 5px;
+ left: 20%;
  font-size: 50px;
  color: #ffffff;
  width: 500px;
@@ -251,8 +252,8 @@ body{
 }
 .slider-des{
   position: absolute;
-  top: 35%;
-  left: 11%;
+  top: 40%;
+  left: 20%;
   width: 300px;
   height: auto;
   margin: 20px 0 20px 0;
@@ -261,19 +262,20 @@ body{
 }
 .slider-button{
   position: absolute;
-  left: 10%;
+  left: 20%;
   top: 68%;
-  color: #E6CBA8;
+  color:black;
   font-size: 15px;
-  background-color: #E14D2A;
+  background-color: #f1bc68;
   padding: 5px 100px;
   border-radius: 30px;
 }
-.slider-ctn a:hover{
-  background-color:#FD841F;
+.button-ctn a:hover{
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
+  background-color: indianred;
+  color: #ffff;
 }
 .slider-btn{
   position: absolute;
@@ -294,8 +296,8 @@ body{
 }
 .realated-post-ctn{
   position: absolute;
-  right: 10%;
-  top: 20%;
+  right: 20%;
+  top: 30%;
 }
 .slide {
   opacity: 0;

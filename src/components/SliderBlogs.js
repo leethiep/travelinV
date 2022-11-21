@@ -57,7 +57,6 @@ const [currentSlide, setCurrentSlide] = useState(0)
         <div>
           <div className="realated-post-ctn">
           <div className="sidebar-articles">
-          <div className="sidebar-articles_title">Related Posts</div>
           <div className="sidebar-articles_container">
             {relatedPosts.map((relatedPost, index) => (
               <Link className="article-text-block" to="/Blogs/Dalat">
@@ -83,7 +82,10 @@ const [currentSlide, setCurrentSlide] = useState(0)
                   </div>
             )
             )}
-          <a className="slider-button" href={slideImages.titile}>Go to post</a>
+          <div className='button-ctn'>
+            <a className="slider-button" href={slideImages.titile}>Go to post</a>
+          </div>
+          
 
           </div>
 

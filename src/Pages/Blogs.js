@@ -60,11 +60,12 @@ export default function Blogs() {
         </div>
       </div>
   </div>
-  <div class="slider-ctn">
+
+</div>
+<div class="slider-ctn">
         <div class="slider-div">
           <SliderBlogs/>
         </div>
-</div>
 </div>
 
 </div> 
