@@ -159,8 +159,7 @@ function HandlCoutContent(type, location, time)
                     style={type === tab.name ? 
                         {
                             color:'black',
-                            marginTop: '-100px',
-                            borderTop: '4px outset rgb(60, 60, 60)',
+                            borderTop: '2px outset #5f5f5f',
                         } : {}}
                     onClick={()=>setType(tab.name)}
                 > 
