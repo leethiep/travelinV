@@ -33,32 +33,50 @@ function GoNext() {
       province: "Da Nang",
       img: { danang },
     },
+    {
+      id: 7,
+      province: "Da Nang",
+      img: { danang },
+    },
+    {
+      id: 8,
+      province: "Da Nang",
+      img: { danang },
+    },
+    {
+      id: 9,
+      province: "Da Nang",
+      img: { danang },
+    },
+    {
+      id: 10,
+      province: "Da Nang",
+      img: { danang },
+    },
   ]);
   return (
     <>
       <div className="next-container">
-      <div>
+        <div className="next-title">
           <p>Where to</p>
           <h2>Next?</h2>
         </div>
-        {places.map((place) => {
-          const { id, province, img } = place;
-          return (
-            <div className="next_place" key={id}>
-              <a href="#">
-                <img
-                  src={window.location.origin + danang}
-                  alt={place.province}
-                  width="50px"
-                  height="50px"
-                />
-                <p>{province}</p>
-              </a>
-            </div>
-          );
-        })}
-        
-
+        <div className="next_place">
+          {places.map((place) => {
+            const { id, province, img } = place;
+            return (
+              <div className="next_place-item" key={id}>
+                <a href="#">
+                  <img
+                    src={window.location.origin + danang}
+                    alt={place.province}
+                  />
+                  <p>{province}</p>
+                </a>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </>
   );

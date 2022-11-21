@@ -24,7 +24,6 @@ body {
   /* overflow-x: hidden; */
 }
 
-
 .intro_image {
   margin-right: 40px;
   position: absolute;
@@ -91,12 +90,21 @@ body {
   padding: 0px 5px;
   margin: 5px 10px;
 }
-.feature_post {
-  width: 400px;
-  height: 400px;
-  margin: 0 20px;
-  overflow: hidden;
+.feature_post--container {
+ 
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
 }
+
+.feature_post {
+  width: 433px;
+
+  margin: 0 15px;
+}
+
 .feature_post h2 {
   color: #353535;
   display: -webkit-box;
@@ -107,64 +115,100 @@ body {
   letter-spacing: 0.5px;
   line-height: 37.7px;
   text-align: center;
+  
 }
 .feature_post--img {
-  width: 400px;
-  height: 300px;
+  width: 433px;
+  height: 266px;
   overflow: hidden;
+  border-radius: 7px;
+
 }
+
 .feature_post--img img {
   width: 100%;
   height: 100%;
   object-position: center;
   object-fit: cover;
-  border-radius: 7px;
+ 
 }
-.list_post {
+.feature_post--img img:hover {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+/* .list_post {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+} */
 .next-container {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   margin: 30px 20px;
+  overflow-x: scroll;
+  height: 70px;
+}
+.next-title {
+  width: 150px;
+}
+
+.next-title h2 {
+  margin: -6px 0px 0px;
+  font-size: 34px;
+  line-height: 34px;
+  width: 100px;
 }
 .next_place {
   align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 5px;
+  float: right;
+ 
+}
+.next-container::-webkit-scrollbar {
+  display: none;
+}
+.next_place-item a:hover {
+  background-color: #e8e7e5;
+}
+.next_place-item {
+  padding: 0 10px;
+}
+.next_place-item p {
+  padding: 0 10px;
+}
+.next_place-item a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 132px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 40px;
   background-color: #f5f4f2;
   border-radius: 40px;
   color: #353535;
   font-family: headings;
   font-weight: 700;
+
   line-height: 16px;
-  padding: 5px 25px 5px 5px;
-  text-align: left;
-  margin: 0 5px;
 }
-.next_place:hover {
-  background-color: #e8e7e5;
-}
-.next_place a {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.next_place img {
+.next_place-item a img {
   width: 40px;
   height: 40px;
-   object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
   border-radius: 50%;
-  margin-right: 10px;
+  /* margin-right: 5px; */
 }
 .slideshow-container {
   color: #fff;
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-bottom: 20px ;
+  padding-bottom: 20px;
 }
 
 .slideshow-slide {
@@ -234,16 +278,17 @@ body {
   text-transform: uppercase;
   border: none;
   width: 50%;
-  margin : 30px 0;
+  margin: 30px 0;
   /* margin: 30px auto; */
   transition: all 0.5s ease;
   cursor: pointer;
   /* transition: 0.5s; */
   background-color: #f1bc68;
-  
 }
 .slideshow-slide-text button:hover {
-  transform: scale(1.1);
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
   background-color: indianred;
   color: #ffff;
 }
@@ -260,12 +305,11 @@ body {
 .related-post--container {
   height: 500px;
 
-  padding: 20px 20px;
+  padding: 20px 30px;
 
   display: flex;
   justify-content: space-around;
   /* position: relative; */
- 
 }
 /* .related-post--container::-webkit-scrollbar {
   display: none;
@@ -290,18 +334,17 @@ body {
   font-family: Merriweather;
   font-size: 14px;
   line-height: 25.9px;
-  padding: 9.8px ;
+  padding: 0 9.8px;
   padding-right: 20px;
-  border-radius:9.8px;
+  border-radius: 9.8px;
 
   /* margin:  10px; */
 }
 .realted-post--item-title {
   letter-spacing: -0.3px;
   line-height: 32.55px;
-  margin: 9.8px 0px ;
+  margin: 9.8px 0px;
   width: 322px;
-
 }
 .related-post--item:hover {
   background-color: #e6e6e6;
@@ -342,9 +385,8 @@ body {
   /* left: 35%; */
   /* left: 500px; */
   margin-left: 20px;
- 
+
   overflow-x: auto;
- 
 }
 .related-post--suggestion::-webkit-scrollbar {
   display: none;
@@ -364,7 +406,7 @@ body {
   height: 400px;  */
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 0 7.5px;
   overflow: hidden;
   position: relative;
@@ -377,6 +419,9 @@ body {
 }
 .suggestion--item img:hover {
   /* transform: rotateY(-180deg); */
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
 }
 .suggestion--item img {
   width: 100%;
@@ -393,14 +438,3 @@ body {
   font-size: 30px;
   line-height: 67.5px;
 }
-
-.feature_post img:hover {
-  scale: 1.1;
-  transition: all 0.8s ease;
-}
-/* img:hover{
-  scale: 1.1;
-  transition:all .8s ease;
-
-
-} */

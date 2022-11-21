@@ -21,19 +21,23 @@ function FeaturePost() {
     },
   ]);
   return (
-    <>
+    <div className="feature_post--container">
       {posts.map((posts) => {
         const { id, title, img } = posts;
         return (
-          <a href="#" className="feature_post" key={id}>
+          
+            <a href="#" className="feature_post" key={id}>
             <h2 className="feature_post--title">{title} </h2>
             <div className="feature_post--img">
               <img  src={img} alt={title} />
             </div>
           </a>
+          
+
+          
         );
       })}
-    </>
+    </div>
   );
 }
 
