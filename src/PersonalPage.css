@@ -2,6 +2,7 @@
     display: block;
     text-align: center;
     height: auto;
+
   }
 
   /* #Thang_avatar_child{
@@ -9,13 +10,20 @@
     width: 100%;
     margin-top: 90px;
   } */
+
+  #Thang_avatar_child{
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-top: 80px;
+  }
   
   #Thang_avatar_child img{
     display: inline-block;
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    margin-top: 90px;
+    margin-top: -7px;
     /* -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
@@ -27,7 +35,7 @@
     display: inline-block;
     width: 850px;
     height: 320px;
-    top: 200px;
+    top: 235px;
     position: absolute;
     z-index: -1;
     background-color: #C1E2E1;
@@ -43,7 +51,8 @@
     background-color: none;
     /* background-color: #C1E2E1; */
     border-radius: 10px;
-    top: -85px;
+    top: -95px;
+    margin-bottom: -50px;
     /* z-index: -1; */
   }
   #Thang_content0 button:hover {
@@ -53,7 +62,7 @@
   .Thang_name {
     display: block;
     font-size: 35px;
-    margin-top: 110px;
+    margin-top: 80px;
     font-family: "Merriweather Sans";
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -66,57 +75,63 @@
     color:#353535;
     background-color: inherit;
     font-size: 30px;
-    top: 5px;
-    right: 20px;
+    top: 0px;
+    right: 10px;
 
-
-    /* height: 60px; */
+    width: 50px;
+    height: 50px;
     /* background-color: red; */
   
   }
 
+
+/* Phần chỉnh sửa thông tin cá nhân */
   #Thang_edit_setting {
     display: inline-block;
     overflow: hidden;
   }
   
-  #Thang_setting:hover {  color: black;}
+  #Thang_setting:hover {  color: black;overflow: -moz-hidden-unscrollable;}
 
   #Thang_edit_setting #Thang_edit {
     display: none;
     /* display: inline-block; */
     position: absolute;
-    background-color: #f8f8f8;
+    background-color: #fefefe;
     top: 45px;
-    right: 29px;
+    right: 20px;
     border-radius: 20px;
     width: 200px;
     height: 40px;
     border: none;
     overflow: hidden;
-
+    font-size: 13px;
+    font-weight: 600;
   }
 
   #Thang_setting:hover + #Thang_edit {
     display: inline-block;
+    overflow: hidden;
   }
 
   #Thang_edit_setting #Thang_edit:hover{
     display: inline-block;
-    background-color: #e3e1e1;
+    /* background-color: #ffffff; */
     font-weight: 600;
-    font-size: 13px;
+    background-color: #f5f5f5;
+    font-size: 13.5px;
 
   }
   
   #Thang_tab {
     display: inline-flex;
+    margin-top: 20px;
   }
   
   .Thang_tab_content {
     margin: 30px 40px;
-    font-size: 20px;
-    font-family: "Merriweather Sans";
+    font-size: 23px;
+    font-family: "Heading"
   }
 
   .Thang_tab_content > span{
@@ -148,7 +163,7 @@
   }
 
   #Thang_content span{
-    vertical-align: -4px;
+    vertical-align: -3px;
   }
   
   #Thang_content button:hover{
@@ -161,6 +176,8 @@
     margin: 0px;
     margin-left: 20px;
     font-weight: bold;
+    font-size: 28px;
+    font-family: "Heading"
   }
   
   
@@ -170,9 +187,9 @@
   }
   
   #Thang_hr {
+    display: inline-block;
     width:1090px;
     text-align: center;
-    margin-top: 0px;
   }
   
   /* .Thang_a {
@@ -183,7 +200,7 @@
   
   #Thang_content1 {
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 25px;
     width: 1110px;
     height: auto;
     text-align: left;
@@ -314,6 +331,8 @@
     padding: 0;
     margin-top: -5px;
     margin-left: -54px;
+    font-family: "Merriweather Sans";
+    font-weight: 600;
   }
   
   #Thang_bstextright{
@@ -324,42 +343,31 @@
     vertical-align: -2px;
   }
   
-  .Thang_button_event {
-    text-decoration: none;
-    color: #747474;
-    display: inline-block;
-    font-size: 15px;
-    /* margin-top: -100px; */
-    background: none;
-    border: none;
-  }
-  
-  .Thang_button_event:hover {
-    color: black;
-  }
-  
-  /* .Thang_button_event:focus {
-    color: red;
-  } */
-  
   .Thang_edit_remove {
     display: none;
     /* display: block; */
     position: absolute;
-    /* border-radius: 50%; */
     border-radius: 5px;
     text-align: center;
+    color: #838383;
+    overflow: hidden;
    }
   
   .Thang_edit_remove .Thang_li {
     width: 100px;
     height: 35px;
     margin: 0;
+    color: #838383;
+    font-size: 18px;
   }
 
   .Thang_edit_remove .Thang_li:hover {
-    background-color: #bdbdbd;
+    background-color: #f5f5f5;
     border-radius: 5px;
+    color: #353535;
+    font-weight: bold;
+    transform: scale(1.05);
+    /* box-sizing: border-box; */
   }
   
   .Thang_li:hover .Thang_edit_remove {
@@ -372,15 +380,21 @@
    }
    /*  */
    #Thang_li1 {
+    display: block;
     width: 100px;
     height: 35px;
     margin: 0;
+    color: #838383;
+    font-size: 18px;
   }
 
   #Thang_li1:hover {
-    background-color: #eaeaea;
+    background-color: #f5f5f5;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    color: #353535;
+    font-weight: bold;
+    transform: scale(1.05);
   }
   
   #Thang_li1:hover .Thang_edit_remove {
@@ -397,12 +411,17 @@
     width: 100px;
     height: 35px;
     margin: 0;
+    color: #838383;
+    font-size: 18px;
   }
 
   #Thang_li2:hover {
-    background-color: #bdbdbd;
+    background-color: #f5f5f5;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    font-weight: bold;
+    color: #353535;
+    transform: scale(1.05);
   }
   
   #Thang_li2:hover .Thang_edit_remove {
@@ -422,7 +441,7 @@
     margin: 15px;
     margin-top: 3px;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 400;
   }
   
   #Thang_content1 p {
@@ -430,6 +449,7 @@
     margin: 0px 15px 0px;
     bottom: 20px;
     left: 0;
+    font-weight: 300;
   }
 
   /* #Thang_content_Author {
