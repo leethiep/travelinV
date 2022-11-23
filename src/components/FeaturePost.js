@@ -6,17 +6,17 @@ function FeaturePost() {
     {
       id: 1,
       title: "10 Best Places To Visit In Da Lat ",
-      img: "https://media.timeout.com/images/105859745/750/422/image.jpg",
+      img: "https://i.pinimg.com/564x/49/61/c4/4961c45f5411a2dc19a9e57918742e48.jpg",
     },
     {
       id: 2,
       title: "10 Best Places To Visit In Da Lat ",
-      img: "https://i.pinimg.com/564x/78/78/e3/7878e3e64ecb4571802998a85048fc27.jpg",
+      img: "https://i.pinimg.com/564x/41/4d/a3/414da3bc207e7956fa256f8db19b7574.jpg",
     },
     {
       id: 3,
       title: "10 Best Places To Visit In Da Lat ",
-      img: "https://media.timeout.com/images/105859745/750/422/image.jpg",
+      img: "https://i.pinimg.com/564x/de/bc/bf/debcbfce7461d56be7a3e0897028ccfd.jpg",
       
     },
   ]);

@@ -24,6 +24,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/Blogs" element={<Blogs />} />
           {/* <Route path="/Blogs/:relatedPostID" element={<Blogs />} /> */}
+          <Route path="/Shop" element={<ReadBlogs/>}/>
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route element={<ProtectedRoutes />}>
