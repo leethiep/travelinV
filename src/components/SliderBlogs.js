@@ -54,10 +54,10 @@ const [currentSlide, setCurrentSlide] = useState(0)
       setCurrentSlide(currentSlide === 0 ? slideLengh - 1: currentSlide - 1);
     }
     return(
-        <div>
+      <div className="">
           <div className="realated-post-ctn">
           <div className="sidebar-articles">
-          <div className="sidebar-articles_container">
+          <div className="sidebar-articles_container_blogs">
             {relatedPosts.map((relatedPost, index) => (
               <Link className="article-text-block" to="/Blogs/Dalat">
                 <div className="article-text-block_image" key={index}>
@@ -69,24 +69,22 @@ const [currentSlide, setCurrentSlide] = useState(0)
               </Link>
             ))}
           </div>
-        </div>
-      </div>
+          </div>
+          </div>
           <button className=" slider-btn" id="left" onClick={prevSlide} ><HiChevronLeft/></button>
           <button className=" slider-btn" id="right" onClick={nextSlide} ><HiChevronRight/></button>
           <span className="slider-title">{slideImages[currentSlide].titile}</span>
           <span className="slider-des">{slideImages[currentSlide].des}</span>
-            {slideImages.map((slideImage, index) =>(
-                <div key={index}>
+          <div className='button-ctn'>
+            <a className="slider-button" href={slideImages.titile}>GO TO POST</a>
+          </div>
+          {slideImages.map((slideImage, index) =>(
+                <div key={index} className="slide.active">
                   {index === currentSlide && (
                       <img className="slider-img" src={slideImage.url} ></img>)}
                   </div>
             )
             )}
-          <div className='button-ctn'>
-            <a className="slider-button" href={slideImages.titile}>Go to post</a>
-          </div>
-          
-
           </div>
 
 
