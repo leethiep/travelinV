@@ -71,6 +71,8 @@ body{
   border-radius: 20px;
   background-color: #C1E2E1;
   padding:  4px 15px;
+  font-size: 18px;
+  font-family: "Merriweather Sans";
 }
 .goto-container a:hover{
   background-color: #8febee;
@@ -103,6 +105,7 @@ body{
   font-size: 36px;
   height: fit-content;
   margin: 0 0 20px 0;
+  font-family: "Merriweather Sans";
 }
 .featured-img{
   width: 540px;
@@ -126,6 +129,7 @@ body{
   transition-duration: ;
 } */
 .post-name{
+  font-family: "Merriweather Sans";
   position: absolute;
   width: 300px;
   border-radius: 1px;
@@ -150,6 +154,7 @@ body{
   display: flex;
   background-color: none;
   top: 760px;
+  font-family: "Merriweather Sans";
 }
 .recent h2{
   position: absolute;
@@ -158,6 +163,7 @@ body{
   margin: 20px 0 20px 0;
   width: 1100px;
   color: #353535;
+  font-family: "Merriweather Sans";
 }
 .recent p{
   text-align: center;
@@ -166,6 +172,7 @@ body{
   width: 250px;
   position: relative;
   font-size: 20px;
+  font-family: "Merriweather Sans";
 }
 .recent-post-ctn{
   position: relative;
@@ -241,32 +248,34 @@ body{
 }
 .slider-title{
  position: absolute;
- top: 30%;
+ top: 25%;
  left: 15%;
  font-size: 50px;
  color: #ffffff;
  width: 500px;
  height: auto;
  word-wrap: break-word;
+ font-family: "Merriweather Sans";
 }
 .slider-des{
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 15%;
   width: 300px;
   height: auto;
   margin: 20px 0 20px 0;
   color: #ffffff;
   word-wrap: break-word;
+  font-family: "Merriweather Sans";
 }
 .slider-button{
   position: absolute;
   left: 15%;
-  top: 82.5%;
+  top: 60%;
   color:black;
   font-size: 15px;
   background-color: #f1bc68;
-  padding: 8px 200px;
+  padding: 8px 120px;
   border-radius: 30px;
 }
 .button-ctn a:hover{
@@ -296,7 +305,7 @@ body{
 .realated-post-ctn{
   position: absolute;
   right: 15%;
-  top: 30%;
+  top: 20%;
 }
 .slide {
   opacity: 0;
