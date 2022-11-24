@@ -8,6 +8,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register"
 import Blogs from "./Pages/Blogs";
 import PersonalPage from "./Pages/PersonalPage";
+import Footer from "./components/Footer";
 // import PrivateRoutes from "./PrivateRoutes";
 // import ProtectedRoutes from "./PrivateRouter";
 // import Personal from "./Personal";
@@ -32,6 +33,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
+      <Footer/> 
     </UserContext.Provider>
   );
 }
