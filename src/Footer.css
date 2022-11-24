@@ -150,7 +150,7 @@ footer {
 }
 .icon_arrowRight{
     animation-name: arrowRight;               
-    animation-duration: 1.5s;   
+    animation-duration: 1s;   
     animation-direction: alternate;          
     animation-iteration-count: infinite;
     font-size: 14px;
