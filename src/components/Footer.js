@@ -3,6 +3,7 @@ import foot_background from "../image/background-footer.png";
 import img_ins_custom from "../image/img_ins_custom.png";
 import { BsInstagram, BsFacebook, BsGithub } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
+import { AiOutlineCopyrightCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
 export default function Footer() {
@@ -102,6 +103,11 @@ export default function Footer() {
           </nav>
         </div>
         <div className="foot-text">
+        <IconContext.Provider
+                            value={{ className: "icon_CopyrightCircle" }}
+                          >
+                            <AiOutlineCopyrightCircle />
+                          </IconContext.Provider>
             <Link to='/'>Travel in V</Link> - Website designed & built by group 6.
         </div>
       </div>
