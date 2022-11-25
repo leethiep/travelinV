@@ -4,6 +4,8 @@ import FeaturePost from "../components/FeaturePost";
 import GoNext from "../components/GoNext";
 import Slider from "../components/Slider";
 import RelatedPost from "../components/RelatedPost";
+import FormBlog from "./FormBlog";
+
 
 function Home() {
   return (
@@ -16,6 +18,7 @@ function Home() {
       <GoNext />
       <Slider/>
       <RelatedPost />
+      <FormBlog/>
     </div>
   );
 }

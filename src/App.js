@@ -9,6 +9,7 @@ import Register from "./Pages/Register"
 import Blogs from "./Pages/Blogs";
 import PersonalPage from "./Pages/PersonalPage";
 import Footer from "./components/Footer";
+import FormBlog from "./Pages/FormBlog";
 // import PrivateRoutes from "./PrivateRoutes";
 // import ProtectedRoutes from "./PrivateRouter";
 // import Personal from "./Personal";

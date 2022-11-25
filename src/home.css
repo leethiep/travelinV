@@ -34,7 +34,7 @@ body {
 .welcome_text {
   width: 50%;
   /* left: 60%; */
-  font-family: Merriweather;
+  font-family: "Merriweather Sans";
 
 }
 .welcome_text a {
@@ -107,11 +107,12 @@ body {
   width: 440px;
 
   margin: 0 15px;
+  text-align: center;
 }
 
 .feature_post h2 {
   color: #353535;
-  display: -webkit-box;
+  display: inline-flex;
   font-family: headings;
   font-size: 24px;
   padding: 10px;
@@ -119,6 +120,7 @@ body {
   letter-spacing: 0.5px;
   line-height: 37.7px;
   text-align: center;
+  width: 80%;
   
 }
 .feature_post--img {
@@ -247,7 +249,7 @@ body {
   text-align: left;
   position: absolute;
   top: 50px;
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather Sans";
   font-style: italic;
 }
 
@@ -336,7 +338,7 @@ body {
   justify-content: space-around;
   width: 467px;
   color: #353535;
-  font-family: Merriweather;
+  font-family: "Merriweather Sans";
   font-size: 14px;
   line-height: 25.9px;
   padding: 0 9.8px;
@@ -354,6 +356,11 @@ body {
 .related-post--item:hover {
   background-color: #e6e6e6;
 }
+.related-post--item:hover .realted-post--item-image img {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
 .realted-post--item-image {
   /* margin: 10px; */
   width: 126px;
@@ -369,11 +376,7 @@ body {
   object-fit: cover;
   object-position: center;
 }
-.realted-post--item-image img:hover {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
-}
+
 .realted-post--item-title p {
   width: 322px;
   /* width: 100%; */
@@ -381,8 +384,8 @@ body {
 
   color: #353535;
   /* display: -webkit-box; */
-  font-family: headings;
-  font-size: 21px;
+  font-family: "Merriweather";
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.3px;
   line-height: 32.55px;
@@ -445,7 +448,7 @@ body {
   color: #fff;
   bottom: 10px;
   left: 10px;
-  font-family: headings;
+  font-family: "Merriweather Sans";
   font-size: 30px;
   line-height: 67.5px;
 }
