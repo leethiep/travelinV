@@ -1,4 +1,19 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap");
+@font-face {
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff2)
+      format("woff2"),
+    url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff)
+      format("woff");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .nav-container {
   font-family: headings;
   display: flex;
@@ -9,7 +24,7 @@
   display: flex;
   align-items: center;
 }
-.nav-container h1 {
+h1 {
   margin-left: 30px;
 }
 .form {
@@ -42,37 +57,6 @@
   margin-bottom: 20px;
   color: #353535;
 }
-.preview span {
-  color: #353535;
-  font-size: 20px;
-  padding: 20px;
-}
-
-.input input {
-  border: 1px solid #353535;
-  padding: 10px;
-  border-radius: 5px;
-  display: block;
-  width: 700px;
-  margin: 10px;
-  letter-spacing: 0.7px;
-  font-family: "Merriweather", serif;
-
-}
-.input textarea {
-  border: 1px solid #353535;
-  padding: 10px;
-  border-radius: 5px;
-  display: block;
-  width: 700px;
-  margin: 10px;
-  margin: auto;
-  letter-spacing: 0.7px;
-  font-family: "Merriweather", serif;
-
-}
-
-
 .preview img {
   width: 100%;
   height: 100%;
@@ -83,9 +67,73 @@
   left: 0;
   z-index: 1;
 }
+.preview span {
+  color: #353535;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.input {
+  width: 700px;
+ 
+
+}
+.input input {
+  border: 1px solid #353535;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+ 
+  margin: 10px;
+  letter-spacing: 0.7px;
+  font-family: "Merriweather", serif;
+ 
+
+}
+.input textarea {
+  border: 1px solid #353535;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  margin: 10px;
+  letter-spacing: 0.7px;
+  font-family: "Merriweather", serif;
+ 
+
+}
+.image-item {
+  display: flex;
+  margin: 10px;
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+  color: #353535;
+
+  position: relative;
+  /* width: 35%; */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.upload__image-wrapper{
+  display: flex;
+  height: 170px;
+}
 .preview-des {
   border: 2px dashed #353535;
- 
+  /* width: 28%; */
   height: 150px;
   width: 35%;
   color: white;
@@ -100,9 +148,10 @@
   cursor: pointer;
   margin: 10px;
 }
+
 .add-img {
   border: 2px dashed #353535;
- 
+  /* width: 28%; */
   height: 150px;
   width: 35%;
   color: white;
@@ -113,6 +162,8 @@
   cursor: pointer;
   margin: 10px;
   border-radius: 6px;
+  color: #353535;
+
   overflow: hidden;
 }
 
@@ -120,7 +171,7 @@
   font-size: 80px;
   margin: 10px;
   color: #353535;
-  display: block;
+  /* display: block; */
 }
 .preview-des span {
   color: #353535;
@@ -130,7 +181,6 @@
 .description-img {
   display: flex;
 }
-
 .description-img input {
   display: none;
 }
@@ -141,13 +191,15 @@
 .addDesc--icon {
   font-size: 50px;
   border: 2px dashed #353535;
- 
+  /* width: 28%; */
+  color: #353535;
+
   width: 700px;
   cursor: pointer;
   margin: 10px;
   padding: 10px;
   border-radius: 6px;
-  
+  /* overflow: hidden; */
 }
 .submit {
   width: 100px;
@@ -170,32 +222,30 @@
   outline: none;
   background-color: #fff;
   border-radius: 6px;
-  
+  /* margin-left: 600px; */
 
 
 
 }
-.image-item {
 
-}
-.image-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  height: 150px;
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  
-}
 .add-img-btn {
-  border: none;
-  outline: none;
-  background-color: #fff;
-  font-family: headings;
+  /* font-size: 50px; */
+  border: 2px dashed #353535;
+  color: #353535;
+  /* width: 28%; */
+  /* width: 700px; */
+  height: 150px;
+  width: 150px;
   cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: headings;
+  background-color: #fff;
   
 }
+.hidden {
+  display: none;
+}
+

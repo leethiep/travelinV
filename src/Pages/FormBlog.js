@@ -7,6 +7,8 @@ import { BiPlus } from "react-icons/bi";
 import Header from "../components/Header";
 import Input from "../components/Input";
 
+
+
 function FormBlog() {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -50,6 +52,7 @@ function FormBlog() {
 
   return (
     <>
+      <Header />
       <div className="nav-container">
         {/* Thanh địa chỉ */}
         <a href="#">
@@ -61,8 +64,8 @@ function FormBlog() {
           <HiChevronRight />
         </a>
         <a href="#">Create</a>
-        <h1>Create post </h1>
       </div>
+      <h1>Create post </h1>
       {/* {inputList} */}
       {/* <form> */}
       <div className="form">
@@ -89,7 +92,9 @@ function FormBlog() {
               setSelectedImage(event.target.files[0]);
             }}
           />
-          <button className="submit">Submit</button>
+          <button  className="submit">
+            Submit
+          </button>
         </div>
         <div class="input">
           <h3>Title </h3>
@@ -104,7 +109,10 @@ function FormBlog() {
             placeholder="Write the title of your blog ....."
           />
 
-          <div className="description">{inputList}</div>
+          <div className="description">
+            {inputList}
+
+          </div>
           <div className="addDesc">
             <h3>Add more description</h3>
           </div>
@@ -114,9 +122,13 @@ function FormBlog() {
             </button>
           </div>
         </div>
+        
       </div>
+      
     </>
   );
+
+  
 }
 
 export default FormBlog;
