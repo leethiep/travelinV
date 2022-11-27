@@ -39,11 +39,13 @@ function Input() {
         type="text"
         class="title-description"
         placeholder="Write the title  of your description  ....."
+        required
       ></input>
       <textarea
         id="message"
         name="message"
         placeholder="Write the description of your blog...."
+        required
       />
       <div className="App">
       <ImageUploading
