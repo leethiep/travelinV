@@ -15,7 +15,6 @@
   box-sizing: border-box;
 }
 .nav-container {
-  
   display: flex;
   /* font-family: "Merriweather Sans"; */
   font-family: headings;
@@ -37,22 +36,20 @@
   letter-spacing: 1.1px;
   line-height: 19.5px;
   text-transform: uppercase;
-    /* background-position: 0px 153px; */
+  /* background-position: 0px 153px; */
 }
 .nav-container a:hover {
   background-image: linear-gradient(
-    transparent calc(100% - 0.45em),
-    var(--lightblue) 0
-  ),
-  linear-gradient(transparent calc(100% - 0.45em), var(--darkpink) 0);
+      transparent calc(100% - 0.45em),
+      var(--lightblue) 0
+    ),
+    linear-gradient(transparent calc(100% - 0.45em), var(--darkpink) 0);
 }
 .heading {
   margin: 50px 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-
 }
 .heading h1 {
   /* margin: 30px; */
@@ -108,13 +105,11 @@
   width: 700px;
   height: 700px;
   overflow: scroll;
- 
-
 }
 .input::-webkit-scrollbar {
   display: none;
 }
-.input input[type=text] {
+.input input[type="text"] {
   border: 1px solid #353535;
   padding: 10px;
   border-radius: 5px;
@@ -123,12 +118,10 @@
   margin: 10px 0;
   letter-spacing: 0.7px;
   font-family: "Merriweather", serif;
- 
-
 }
 .input textarea {
   border: 1px solid #353535;
-  padding: 10px ;
+  padding: 10px;
   border-radius: 5px;
   display: block;
   width: 700px;
@@ -136,15 +129,13 @@
   margin: 10px 0;
   letter-spacing: 0.7px;
   font-family: "Merriweather", serif;
- 
-
 }
 .image-item {
   display: flex;
-  margin: 10px ;
+  margin: 10px;
   width: 200px;
   height: 150px;
-  padding: 10px ;
+  padding: 10px;
   color: #353535;
   position: relative;
   border-radius: 6px;
@@ -162,7 +153,7 @@
   z-index: 1;
 }
 
-.upload__image-wrapper{
+.upload__image-wrapper {
   display: flex;
   height: 170px;
 }
@@ -230,19 +221,6 @@
   padding: 10px 0;
   border-radius: 6px;
 }
-.container-image input[type=submit] {
-  
-  color: #fff;
-  font-family: headings;
-  background-color: #3eaeff;
-  font-size: 20px;
-  width: 150px;
-  border: none;
-  outline: none;
-  border-radius: 6px;
-  margin: 0 auto;
-  cursor: pointer;
-}
 
 .add-btn {
   border: none;
@@ -250,7 +228,6 @@
   background-color: #fff;
   border-radius: 6px;
 }
-
 
 .add-img-btn {
   /* font-size: 50px; */
@@ -267,7 +244,6 @@
   border-radius: 6px;
   font-family: headings;
   background-color: #fff;
-  
 }
 .hidden {
   display: none;
@@ -280,23 +256,45 @@
 .palace-list {
   text-align: right;
 }
+.palace-list option {
+  padding: 10px 0;
+}
 
 #palace {
   color: #353535;
   border: none;
   outline: none;
   box-shadow: 0px 0px 5px 2px #d2d2d2;
-  font-family: headings;
+  font-family: "Merriweather Sans";
   border-radius: 6px;
-  padding: 5px;
-  margin:  10px;
-
-  
+  padding: 10px;
+  margin: 10px;
 }
 .submit {
-  width: 200px;
-  text-align: center;
+  width: 280px;
+
+  margin: 50px auto;
+}
+.container-image input[type="submit"] {
+  font-family: headings;
+
+  width: 50%;
+  border: none;
+  outline: none;
   margin: 0 auto;
-  margin: 100px 50px;
-  float :left;
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+  background-color: #f1bc68;
+  /* padding: 8px 120px; */
+  border-radius: 30px;
+  text-align: center;
+  font-style: normal;
+}
+.container-image input[type="submit"]:hover{
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+  background-color: indianred;
+  color: #ffff;
 }

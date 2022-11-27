@@ -64,7 +64,7 @@ function FormBlog() {
             }}
           />
           <div className="submit">
-            <input type="submit" className="submit"></input>
+            <input type="submit" className="submit" value="POST"></input>
           </div>
           {/* <button className="submit">Submit</button> */}
         </div>
@@ -75,11 +75,12 @@ function FormBlog() {
           <label for="palace">Choose palace:</label>
          
           <select name="palace" id="palace" required>
+          <option value="">None</option>
             {provinces.map((province)=>{
               console.log(province)
              return (
               <>
-              <option value="">None</option>
+              
               <option value={province.slug}>{province.name}</option>
               </>
              )
