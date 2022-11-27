@@ -50,7 +50,7 @@ function Slider() {
   useEffect(() => {
     setTimeout(() => {
       setCurrentSlide(() => {
-        console.log(currentSlide);
+        // console.log(currentSlide);
         if (currentSlide + 1 > slide.length - 1) {
           return 0;
         } else {

@@ -6,69 +6,40 @@ import { BsFileImage } from "react-icons/bs";
 import { BiPlus } from "react-icons/bi";
 import Header from "../components/Header";
 import Input from "../components/Input";
-
-
+import dataProvince from "../dataProvince";
 
 function FormBlog() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const [inputList, setInputList] = useState([<Input />]);
   const onAddBtnClick = (event) => {
+    console.log('add', inputList)
     setInputList(inputList.concat(<Input key={inputList.length} />));
   };
-  // const handleSubmission = () => {
-  //   const formData = new FormData();
-
-  //   formData.append("File", selectedImage);
-
-  //   fetch("https://freeimage.host/api/1/upload?key=6d207e02198a847aa98d0a2a901485a5", {
-  //     method: "POST",
-  //     body: formData,
-  //   })
-  //     .then((response) => response.json())
-  //     .then((result) => {
-  //       console.log("Success:", result);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //     });
-  // };
-
-  // function handleSubmit(event) {
-  //   event.preventDefault()
-  //   const url = 'http://localhost:3000/uploadFile';
-  //   const formData = new FormData();
-  //   formData.append('file', file);
-  //   formData.append('fileName', file.name);
-  //   const config = {
-  //     headers: {
-  //       'content-type': 'multipart/form-data',
-  //     },
-  //   };
-  //   axios.post(url, formData, config).then((response) => {
-  //     console.log(response.data);
-  //   });
-  // }
-
+  const [provinces, setProvinces] = useState(dataProvince)
+  
+  
+  
+  
   return (
     <>
       <Header />
       <div className="nav-container">
         {/* Thanh địa chỉ */}
-        <a href="#">
-          Home
-          <HiChevronRight />
-        </a>
-        <a href="#">
-          Blogs
-          <HiChevronRight />
-        </a>
+        <a href="#">Home</a>
+        <HiChevronRight />
+        <a href="#">Blogs</a>
+        <HiChevronRight />
         <a href="#">Create</a>
       </div>
-      <h1>Create post </h1>
+      <div className="heading ">
+        <h1>Create post </h1>
+       
+      </div>
       {/* {inputList} */}
-      {/* <form> */}
+      <form>
       <div className="form">
+      
         <div className="container-image ">
           <label for="input-img" className="preview">
             <BsFileImage className="preview--icon" />
@@ -92,27 +63,45 @@ function FormBlog() {
               setSelectedImage(event.target.files[0]);
             }}
           />
-          <button  className="submit">
-            Submit
-          </button>
+          <div className="submit">
+            <input type="submit" className="submit"></input>
+          </div>
+          {/* <button className="submit">Submit</button> */}
         </div>
         <div class="input">
-          <h3>Title </h3>
+         
+          <div className="palace-list">
+          {" "}
+          <label for="palace">Choose palace:</label>
+         
+          <select name="palace" id="palace" required>
+            {provinces.map((province)=>{
+              console.log(province)
+             return (
+              <>
+              <option value="">None</option>
+              <option value={province.slug}>{province.name}</option>
+              </>
+             )
+            })}
+
+          </select>
+        </div>
+        <h3>Title </h3>
           <input
             type="text"
             class="title"
             placeholder="Write the title of your blog ....."
+            required
           ></input>
           <textarea
             id="message"
             name="message"
             placeholder="Write the title of your blog ....."
+            required
           />
 
-          <div className="description">
-            {inputList}
-
-          </div>
+          <div className="description">{inputList}</div>
           <div className="addDesc">
             <h3>Add more description</h3>
           </div>
@@ -122,13 +111,10 @@ function FormBlog() {
             </button>
           </div>
         </div>
-        
       </div>
-      
+      </form>
     </>
   );
-
-  
 }
 
 export default FormBlog;
